@@ -1,0 +1,9 @@
+17:32:49 **** Incremental Build of configuration Nios II for project WS2812_Test ****
+make all 
+Info: Building ../WS2812_Test_bsp/
+K:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../WS2812_Test_bsp/
+[BSP build complete]
+[WS2812_Test build complete]
+
+17:32:50 Build Finished (took 807ms)
+

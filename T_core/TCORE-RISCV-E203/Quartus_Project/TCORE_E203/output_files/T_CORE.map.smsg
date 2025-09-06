@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at T_CORE.v(53): object "GPIO" differs only in case from object "gpio" in the same scope File: /home/terasic/Desktop/TCORE-RISCV-E203/Quartus_Project/TCORE_E203/T_CORE.v Line: 53

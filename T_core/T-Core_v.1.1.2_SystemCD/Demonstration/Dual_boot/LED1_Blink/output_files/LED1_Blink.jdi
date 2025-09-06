@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="9a4344484fea0787a5fd"/>
+  </project>
+  <file_info>
+    <file device="10M50DAF484C7G" path="LED1_Blink.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="dual_boot:u0" name="u0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME dual_boot HAS_SOPCINFO 1 GENERATION_ID 1559638136"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

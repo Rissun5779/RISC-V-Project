@@ -1,0 +1,1202 @@
+!SESSION 2019-06-20 15:15:35.728 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization K:/intelfpga/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization K:/intelfpga/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-06-20 15:15:55.549
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-06-20 15:17:15.237
+!MESSAGE Indexed 'WS2812_Test_bsp' (83 sources, 62 headers) in 1.04 sec: 1,216 declarations; 2,657 references; 113 unresolved inclusions; 6 syntax errors; 195 unresolved names (4.8%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-06-20 15:17:19.216
+!MESSAGE Indexed 'WS2812_Test' (1 sources, 0 headers) in 0.009 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:41:25.870
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x41050 --id=0x0 --timestamp=1561015392]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:41:29.183
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x41050 --id=0x0 --timestamp=1561015392 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:42:06.433
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x41050 --id=0x0 --timestamp=1561015392]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:42:10.127
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x41050 --id=0x0 --timestamp=1561015392 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:44:01.832
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x41050 --id=0x0 --timestamp=1561015392]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:44:05.172
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x41050 --id=0x0 --timestamp=1561015392 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:45:03.866
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x41050 --id=0x0 --timestamp=1561015392]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:45:07.098
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x41050 --id=0x0 --timestamp=1561015392 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:45:21.035
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x41050 --id=0x0 --timestamp=1561015392]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:45:24.359
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x41050 --id=0x0 --timestamp=1561015392 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:47:44.752
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x41050 --id=0x0 --timestamp=1561015392]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:47:48.018
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x41050 --id=0x0 --timestamp=1561015392 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:52:35.816
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x41050 --id=0x0 --timestamp=1561015392]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:52:39.076
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x41050 --id=0x0 --timestamp=1561015392 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:55:54.509
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x41050 --id=0x0 --timestamp=1561015392]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 15:55:57.581
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x41050 --id=0x0 --timestamp=1561015392 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:09:14.176
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:09:17.413
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:10:16.839
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:10:20.072
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:18:28.042
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:18:31.234
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:19:13.501
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:19:17.087
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:20:21.419
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:20:24.635
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:21:23.328
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:21:26.664
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:22:24.317
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:22:27.607
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:24:08.189
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:24:11.479
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:25:02.827
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:25:06.208
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:28:58.895
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:29:01.949
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:35:10.544
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:35:13.925
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:36:07.962
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:36:11.207
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:38:18.149
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:38:21.361
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:40:57.179
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:41:00.466
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:43:46.707
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:43:50.008
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:45:38.323
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561017997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:45:41.625
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561017997 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-20 16:54:29.809
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1561020687", expected: "1561017997".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-20 16:54:29.992
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1561020687", expected: "1561017997".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:54:37.740
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561020687]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:54:41.009
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561020687 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:55:15.878
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561020687]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:55:19.166
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561020687 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-20 16:58:31.890
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1561020953", expected: "1561020687".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-20 16:58:31.893
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1561020953", expected: "1561020687".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:58:39.645
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561020953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 16:58:42.864
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561020953 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 17:12:12.530
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561020953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 17:12:15.912
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561020953 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 17:17:53.511
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561022126]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 17:17:56.758
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561022126 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 17:45:51.163
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561022126]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 17:45:54.274
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561022126 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 17:54:13.355
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561022126]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 17:54:16.709
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561022126 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 17:54:54.044
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561022126]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 17:54:57.268
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561022126 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:10:12.798
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561022126]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:10:16.086
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561022126 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:11:22.996
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561022126]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:11:26.265
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561022126 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:12:44.676
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561022126]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:12:47.886
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561022126 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:17:59.574
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561022126]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:18:02.938
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561022126 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:19:00.890
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561022126]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:19:04.006
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561022126 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:21:48.099
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561022126]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:21:51.402
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561022126 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:22:21.313
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561022126]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:22:24.605
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561022126 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:24:01.200
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561022126]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-20 18:24:04.558
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561022126 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:31:38.200
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561083658]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:31:41.690
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561083658 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:32:19.388
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561083658]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:32:22.707
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561083658 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:33:39.313
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561083658]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:33:42.648
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561083658 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:38:29.675
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561084550]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:38:32.940
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561084550 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:43:36.593
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561084851]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:43:39.895
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561084851 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY org.eclipse.cdt.ui 4 0 2019-06-21 10:44:01.232
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element main.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:484)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:573)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:362)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:349)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2019-06-21 10:44:01.234
+!MESSAGE Element main.c does not exist.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:44:20.034
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561084851]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:44:23.328
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561084851 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:54:17.469
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561085528]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:54:20.799
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561085528 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:55:24.954
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561085528]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 10:55:28.241
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561085528 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 11:01:20.365
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561085931]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 11:01:23.603
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561085931 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 11:01:45.602
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561085931]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 11:01:48.843
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561085931 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 11:07:13.253
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1561086276", expected: "1561085931".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 11:07:13.256
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1561086276", expected: "1561085931".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 11:07:19.800
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561086276]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 11:07:23.037
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561086276 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 11:47:49.484
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561088695]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 11:47:52.939
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561088695 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 11:48:16.644
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561088695]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 11:48:19.867
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561088695 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 11:49:04.459
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561088695]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 11:49:07.823
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561088695 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 13:13:56.518
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1561093795", expected: "1561089120".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 13:13:56.521
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1561093795", expected: "1561089120".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:14:03.131
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561093795]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:14:06.499
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561093795 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:14:37.455
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561093795]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:14:40.820
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561093795 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:15:09.179
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561093795]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:15:12.722
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561093795 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:21:38.199
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561094190]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:21:41.492
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561094190 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:22:25.695
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x30 --id=0x0 --timestamp=1561094190]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:22:29.072
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x30 --id=0x0 --timestamp=1561094190 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 13:23:13.105
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 13:23:13.108
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 13:23:22.151
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 13:23:22.153
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:23:39.600
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:23:42.539
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:24:20.074
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:24:23.033
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:24:49.200
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 13:24:52.062
+!MESSAGE Failed Executing: [nios2-download, '--cable=DECore on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=0x30] return code: 2, no processors found
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:24:52.154
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 13:24:55.630
+!MESSAGE Failed Executing: [nios2-download, '--cable=DECore on localhost [USB-1]', --device=1, --instance=0, --go, --accept-bad-sysid, --sidp=0x30, /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf] return code: 2, no processors found
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 13:24:55.633
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:25:02.793
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:25:05.789
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:26:01.623
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:26:04.492
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:26:25.994
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:26:28.908
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:26:49.256
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 13:26:52.179
+!MESSAGE Failed Executing: [nios2-download, '--cable=DECore on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=0x30] return code: 2, no processors found
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:26:52.224
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 13:26:55.744
+!MESSAGE Failed Executing: [nios2-download, '--cable=DECore on localhost [USB-1]', --device=1, --instance=0, --go, --accept-bad-sysid, --sidp=0x30, /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf] return code: 2, no processors found
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-06-21 13:26:55.745
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:27:05.463
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:27:08.404
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:38:41.497
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:38:44.398
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:43:43.944
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:43:46.947
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:48:50.263
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:48:53.143
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:49:14.038
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:49:16.919
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:50:05.576
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:50:08.487
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:55:29.857
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:55:32.801
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:55:50.447
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:55:53.547
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:56:18.647
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:56:21.562
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:56:44.189
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:56:47.085
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:57:14.098
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:57:16.964
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:57:35.455
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:57:38.338
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:57:54.629
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 13:57:57.483
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:19:33.673
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:19:36.597
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:24:40.258
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:24:43.166
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:24:59.751
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:25:02.697
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:25:37.045
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:25:39.885
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:30:33.136
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:30:36.031
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:32:19.702
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:32:22.692
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:33:31.885
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:33:34.754
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:52:13.741
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 14:52:16.570
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:07:21.359
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:07:24.245
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:07:45.319
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:07:48.010
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:08:49.048
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:08:51.897
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:09:13.474
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:09:16.359
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:10:16.437
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:10:19.274
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:10:47.326
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:10:50.239
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:20:29.146
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:20:32.156
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:20:51.715
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:20:54.714
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:22:01.540
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:22:04.490
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:26:50.927
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:26:53.867
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:28:47.639
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:28:50.513
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:29:53.607
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:29:56.384
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:30:40.783
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:30:43.736
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:31:05.038
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:31:07.957
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:31:44.844
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:31:47.811
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:32:22.944
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:32:25.914
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:33:02.545
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:33:05.480
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:33:43.713
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:33:46.656
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:34:54.387
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:34:57.327
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:35:12.816
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:35:15.819
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:38:02.563
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:38:05.497
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:39:52.147
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:39:55.021
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:40:31.201
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:40:34.165
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:41:06.112
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:41:08.919
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:41:43.134
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:41:46.055
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:42:03.940
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:42:06.811
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:43:17.968
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:43:20.870
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:44:00.498
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:44:03.439
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:44:48.419
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:44:51.378
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:45:21.522
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:45:24.426
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:45:48.164
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:45:51.116
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:46:19.300
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:46:22.205
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:49:14.522
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:49:17.484
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:51:37.218
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:51:40.273
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:53:55.232
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 15:53:58.176
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:22:46.534
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:22:49.556
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:24:27.956
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:24:30.889
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:24:52.575
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:24:55.384
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:25:47.779
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:25:50.714
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:26:22.050
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:26:25.007
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:28:08.242
+!MESSAGE Terminated Launch with connection: 10DECore on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:28:08.859
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:28:11.814
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:31:31.961
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:31:34.954
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:31:47.957
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:31:51.045
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:32:19.747
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:32:22.680
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:33:46.297
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:33:49.320
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:36:39.121
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:36:41.980
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:36:51.115
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:36:53.975
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:39:31.339
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:39:34.320
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:40:35.164
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:40:38.123
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:41:02.237
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:41:05.194
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:41:43.518
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:41:46.410
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:42:36.304
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:42:39.269
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:43:45.532
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:43:48.550
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:44:59.808
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:45:02.907
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:45:34.917
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:45:37.811
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:49:17.492
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 16:49:20.474
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:02:42.760
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:02:45.903
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:04:34.222
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:04:37.405
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:05:45.507
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:05:48.616
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:06:39.402
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:06:42.536
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:08:06.062
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:08:09.210
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:09:58.682
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:10:01.798
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:11:14.964
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:11:18.127
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:12:33.526
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:12:36.606
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:13:02.952
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:13:06.054
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:15:24.196
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:15:27.390
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:16:57.462
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:17:00.571
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:19:34.143
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:19:37.227
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:26:55.966
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:26:59.452
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:28:53.992
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:28:57.114
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:29:55.474
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:29:58.528
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:32:16.085
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:32:19.247
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:32:51.582
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x30]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-06-21 17:32:54.654
+!MESSAGE Executing: [K:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DECore on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x30 /cygdrive/k/DE_CORE/nick/software/WS2812_Test/WS2812_Test.elf]

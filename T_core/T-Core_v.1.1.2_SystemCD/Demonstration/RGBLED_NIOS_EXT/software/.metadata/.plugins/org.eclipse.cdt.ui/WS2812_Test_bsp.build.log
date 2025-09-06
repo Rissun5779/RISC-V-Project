@@ -1,0 +1,6 @@
+15:17:14 **** Clean-only build of configuration Nios II for project WS2812_Test_bsp ****
+make clean 
+[BSP clean complete]
+
+15:17:14 Build Finished (took 590ms)
+

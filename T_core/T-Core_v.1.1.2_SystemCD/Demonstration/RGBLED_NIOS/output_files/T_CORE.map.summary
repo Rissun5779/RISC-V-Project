@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Fri Nov 08 16:25:08 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : T_CORE
+Top-level Entity Name : T_CORE
+Family : MAX 10
+Total logic elements : 4,467
+    Total combinational functions : 3,437
+    Dedicated logic registers : 2,605
+Total registers : 2605
+Total pins : 57
+Total virtual pins : 0
+Total memory bits : 1,074,252
+Embedded Multiplier 9-bit elements : 6
+Total PLLs : 1
+UFM blocks : 0
+ADC blocks : 0

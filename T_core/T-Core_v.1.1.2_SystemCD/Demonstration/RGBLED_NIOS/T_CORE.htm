@@ -1,0 +1,469 @@
+<html>
+<body>
+<title>DE CORE Board Configuration</title> 
+<h2 align="center">DE CORE Board Configuration</h2>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="http://www.terasic.com">
+        <img src="http://www.terasic.com.cn/theme/2012/images/top_menu_03.jpg" />
+     </a>
+     <a href="http://www.terasic.com">www.terasic.com</a>
+     <br>
+     </br>
+     <span style="font-family:arial;">Copyright &copy 2003-2019 Terasic Inc. All Rights Reserved. </span>
+<br />
+<br />
+<h3 align="left">Pin Assignments:</h3>
+
+<style>
+#nav30 { position:fixed;right:30%;top:12%; }
+</style>
+   <div id="nav30">
+   <nav>
+    <a href="#Clocks"><li>Clocks</li></a>
+    <a href="#KEY"><li>KEY</li></a>
+    <a href="#SW"><li>SW</li></a>
+    <a href="#LED"><li>LED</li></a>
+    <a href="#GPIO"><li>GPIO</li></a>
+    <a href="#TMD"><li>TMD</li></a>
+    <a href="#EX"><li>EX</li></a>
+    <a href="#OB"><li>OB</li></a>
+    <a href="#QSPI"><li>QSPI</li></a>
+    <a href="#RISCV"><li>RISCV</li></a>
+   </nav>
+   </div>
+<h2><a name="Clocks"></a></h2><table border="3">
+<caption>Clocks</caption>
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">IO Standard</th>
+</tr>
+<tr>
+   <td align="left">ADC_CLK_10</td>
+   <td align="left">N5</td>
+   <td align="left">input</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">MAX10_CLK1_50</td>
+   <td align="left">P11</td>
+   <td align="left">input</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">MAX10_CLK2_50</td>
+   <td align="left">N14</td>
+   <td align="left">input</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+</table>
+<h2><a name="KEY"></a></h2><table border="3">
+<caption>KEY</caption>
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">IO Standard</th>
+</tr>
+<tr>
+   <td align="left">KEY[0]</td>
+   <td align="left">AB9</td>
+   <td align="left">input</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">KEY[1]</td>
+   <td align="left">AA9</td>
+   <td align="left">input</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+</table>
+<h2><a name="SW"></a></h2><table border="3">
+<caption>SW</caption>
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">IO Standard</th>
+</tr>
+<tr>
+   <td align="left">SW[0]</td>
+   <td align="left">AB16</td>
+   <td align="left">input</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">SW[1]</td>
+   <td align="left">Y16</td>
+   <td align="left">input</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">SW[2]</td>
+   <td align="left">V16</td>
+   <td align="left">input</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">SW[3]</td>
+   <td align="left">AB17</td>
+   <td align="left">input</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+</table>
+<h2><a name="LED"></a></h2><table border="3">
+<caption>LED</caption>
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">IO Standard</th>
+</tr>
+<tr>
+   <td align="left">LED[0]</td>
+   <td align="left">AA16</td>
+   <td align="left">output</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">LED[1]</td>
+   <td align="left">AB15</td>
+   <td align="left">output</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">LED[2]</td>
+   <td align="left">AA15</td>
+   <td align="left">output</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">LED[3]</td>
+   <td align="left">AA14</td>
+   <td align="left">output</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+</table>
+<h2><a name="GPIO"></a></h2><table border="3">
+<caption>GPIO</caption>
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">IO Standard</th>
+</tr>
+<tr>
+   <td align="left">GPIO[0]</td>
+   <td align="left">H21</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[1]</td>
+   <td align="left">H22</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[2]</td>
+   <td align="left">J21</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[3]</td>
+   <td align="left">J22</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[4]</td>
+   <td align="left">G19</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[5]</td>
+   <td align="left">G20</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[6]</td>
+   <td align="left">F22</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[7]</td>
+   <td align="left">G22</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[8]</td>
+   <td align="left">E21</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[9]</td>
+   <td align="left">E22</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[10]</td>
+   <td align="left">Y4</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[11]</td>
+   <td align="left">AA1</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[12]</td>
+   <td align="left">Y3</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[13]</td>
+   <td align="left">Y2</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[14]</td>
+   <td align="left">Y1</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[15]</td>
+   <td align="left">AA2</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[16]</td>
+   <td align="left">T22</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[17]</td>
+   <td align="left">AA21</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[18]</td>
+   <td align="left">T21</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[19]</td>
+   <td align="left">T19</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[20]</td>
+   <td align="left">U22</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[21]</td>
+   <td align="left">AA22</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[22]</td>
+   <td align="left">U21</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">GPIO[23]</td>
+   <td align="left">T20</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+</table>
+<h2><a name="TMD"></a></h2><table border="3">
+<caption>TMD</caption>
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">IO Standard</th>
+</tr>
+<tr>
+   <td align="left">TMD_D[0]</td>
+   <td align="left">AB8</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">TMD_D[1]</td>
+   <td align="left">AA8</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">TMD_D[2]</td>
+   <td align="left">AA5</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">TMD_D[3]</td>
+   <td align="left">AB5</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">TMD_D[4]</td>
+   <td align="left">AB7</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">TMD_D[5]</td>
+   <td align="left">AA7</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">TMD_D[6]</td>
+   <td align="left">AB6</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">TMD_D[7]</td>
+   <td align="left">AA6</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+</table>
+<h2><a name="EX"></a></h2><table border="3">
+<caption>EX</caption>
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">IO Standard</th>
+</tr>
+<tr>
+   <td align="left">EX_LED_RGB_D</td>
+   <td align="left">D18</td>
+   <td align="left">output</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+</table>
+<h2><a name="OB"></a></h2><table border="3">
+<caption>OB</caption>
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">IO Standard</th>
+</tr>
+<tr>
+   <td align="left">OB_LED_RGB_D</td>
+   <td align="left">D19</td>
+   <td align="left">output</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+</table>
+<h2><a name="QSPI"></a></h2><table border="3">
+<caption>QSPI</caption>
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">IO Standard</th>
+</tr>
+<tr>
+   <td align="left">QSPI_FLASH_SCLK</td>
+   <td align="left">P19</td>
+   <td align="left">output</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">QSPI_FLASH_DATA[0]</td>
+   <td align="left">P21</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">QSPI_FLASH_DATA[1]</td>
+   <td align="left">P18</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">QSPI_FLASH_DATA[2]</td>
+   <td align="left">R18</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">QSPI_FLASH_DATA[3]</td>
+   <td align="left">P20</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">QSPI_FLASH_CE_n</td>
+   <td align="left">L22</td>
+   <td align="left">inout</td>
+   <td align="left">3.3-V LVTTL</td>
+</tr>
+</table>
+<h2><a name="RISCV"></a></h2><table border="3">
+<caption>RISCV</caption>
+<tr>
+   <th align="left" bgcolor="Khaki">Name</th>
+   <th align="left" bgcolor="Khaki">Location</th>
+   <th align="left" bgcolor="Khaki">Direction</th>
+   <th align="left" bgcolor="Khaki">IO Standard</th>
+</tr>
+<tr>
+   <td align="left">RISCV_JTAG_TCK</td>
+   <td align="left">C7</td>
+   <td align="left">input</td>
+   <td align="left">2.5-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">RISCV_JTAG_TDI</td>
+   <td align="left">B7</td>
+   <td align="left">input</td>
+   <td align="left">2.5-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">RISCV_JTAG_TDO</td>
+   <td align="left">A6</td>
+   <td align="left">output</td>
+   <td align="left">2.5-V LVTTL</td>
+</tr>
+<tr>
+   <td align="left">RISCV_JTAG_TMS</td>
+   <td align="left">C8</td>
+   <td align="left">input</td>
+   <td align="left">2.5-V LVTTL</td>
+</tr>
+</table>
+<br>
+</br>
+</html>
+</body>

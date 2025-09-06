@@ -1,0 +1,30 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst Qsys.nios2_gen2.clock_bridge -pg 1
+preplace inst Qsys.onchip_memory2 -pg 1 -lvl 7 -y 230
+preplace inst Qsys.led -pg 1 -lvl 7 -y 30
+preplace inst Qsys.sysid_qsys -pg 1 -lvl 7 -y 410
+preplace inst Qsys.nios2_gen2.reset_bridge -pg 1
+preplace inst Qsys.jtag_uart -pg 1 -lvl 7 -y 130
+preplace inst Qsys.altpll -pg 1 -lvl 3 -y 110
+preplace inst Qsys.WS2812_CONTROL -pg 1 -lvl 7 -y 490
+preplace inst Qsys -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst Qsys.timer -pg 1 -lvl 7 -y 310
+preplace inst Qsys.clk -pg 1 -lvl 1 -y 270
+preplace inst Qsys.mm_clock_crossing_bridge -pg 1 -lvl 4 -y 80
+preplace inst Qsys.nios2_gen2.cpu -pg 1
+preplace inst Qsys.nios2_gen2 -pg 1 -lvl 4 -y 250
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)WS2812_CONTROL.conduit_end_dout,(SLAVE)Qsys.ws2812_control_conduit_end_dout) 1 0 7 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ
+preplace netloc FAN_OUT<net_container>Qsys</net_container>(SLAVE)sysid_qsys.clk,(SLAVE)led.clk,(SLAVE)jtag_uart.clk,(SLAVE)timer.clk,(MASTER)clk.clk,(SLAVE)mm_clock_crossing_bridge.m0_clk,(SLAVE)altpll.inclk_interface) 1 1 6 410 140 590 80 1140 40 NJ 40 NJ 40 1680
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)clk.clk_in_reset,(SLAVE)Qsys.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)Qsys.clk,(SLAVE)clk.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)Qsys.led_external_connection,(SLAVE)led.external_connection) 1 0 7 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ
+preplace netloc FAN_OUT<net_container>Qsys</net_container>(MASTER)mm_clock_crossing_bridge.m0,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)sysid_qsys.control_slave,(SLAVE)led.s1,(SLAVE)timer.s1) 1 4 3 NJ 130 NJ 130 1700
+preplace netloc INTERCONNECT<net_container>Qsys</net_container>(MASTER)nios2_gen2.instruction_master,(SLAVE)WS2812_CONTROL.avalon_slave,(SLAVE)onchip_memory2.s1,(SLAVE)nios2_gen2.debug_mem_slave,(SLAVE)altpll.pll_slave,(MASTER)nios2_gen2.data_master,(SLAVE)mm_clock_crossing_bridge.s0) 1 2 5 610 100 1100 390 1540 280 NJ 280 1620
+preplace netloc FAN_OUT<net_container>Qsys</net_container>(SLAVE)WS2812_CONTROL.clock,(SLAVE)onchip_memory2.clk1,(SLAVE)mm_clock_crossing_bridge.s0_clk,(MASTER)altpll.c0,(SLAVE)nios2_gen2.clk) 1 3 4 1120 210 NJ 210 NJ 210 1600
+preplace netloc FAN_OUT<net_container>Qsys</net_container>(MASTER)nios2_gen2.irq,(SLAVE)jtag_uart.irq,(SLAVE)timer.irq) 1 4 3 NJ 340 NJ 340 1660
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)altpll.locked_conduit,(SLAVE)Qsys.altpll_locked_conduit) 1 0 3 NJ 180 NJ 180 NJ
+preplace netloc INTERCONNECT<net_container>Qsys</net_container>(SLAVE)altpll.inclk_interface_reset,(SLAVE)onchip_memory2.reset1,(SLAVE)timer.reset,(SLAVE)led.reset,(MASTER)clk.clk_reset,(SLAVE)sysid_qsys.reset,(SLAVE)mm_clock_crossing_bridge.m0_reset,(MASTER)nios2_gen2.debug_reset_request,(SLAVE)jtag_uart.reset,(SLAVE)WS2812_CONTROL.reset_sink,(SLAVE)mm_clock_crossing_bridge.s0_reset,(SLAVE)nios2_gen2.reset) 1 1 6 430 160 590 240 1140 410 1520 300 NJ 300 1640
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)Qsys.altpll_areset_conduit,(SLAVE)altpll.areset_conduit) 1 0 3 NJ 120 NJ 120 NJ
+levelinfo -pg 1 0 200 1900
+levelinfo -hier Qsys 210 240 570 910 1280 1560 1580 1740 1890

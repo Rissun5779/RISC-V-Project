@@ -1,0 +1,343 @@
+#============================================================
+# Build by Terasic V2.0.0
+#============================================================
+
+set_global_assignment -name FAMILY "MAX 10 FPGA"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY "T_CORE"
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.1
+set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "FRI APR 26 16:45:57 2019"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+#============================================================
+# Clocks
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK1_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK2_50
+set_location_assignment PIN_N5 -to ADC_CLK_10
+set_location_assignment PIN_P11 -to MAX10_CLK1_50
+set_location_assignment PIN_N14 -to MAX10_CLK2_50
+
+#============================================================
+# KEY
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1]
+set_location_assignment PIN_AB9 -to KEY[0]
+set_location_assignment PIN_AA9 -to KEY[1]
+
+#============================================================
+# SW
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3]
+set_location_assignment PIN_AB16 -to SW[0]
+set_location_assignment PIN_Y16 -to SW[1]
+set_location_assignment PIN_V16 -to SW[2]
+set_location_assignment PIN_AB17 -to SW[3]
+
+#============================================================
+# LED
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[3]
+set_location_assignment PIN_AA16 -to LED[0]
+set_location_assignment PIN_AB15 -to LED[1]
+set_location_assignment PIN_AA15 -to LED[2]
+set_location_assignment PIN_AA14 -to LED[3]
+
+#============================================================
+# GPIO
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[23]
+set_location_assignment PIN_H21 -to GPIO[0]
+set_location_assignment PIN_H22 -to GPIO[1]
+set_location_assignment PIN_J21 -to GPIO[2]
+set_location_assignment PIN_J22 -to GPIO[3]
+set_location_assignment PIN_G19 -to GPIO[4]
+set_location_assignment PIN_G20 -to GPIO[5]
+set_location_assignment PIN_F22 -to GPIO[6]
+set_location_assignment PIN_G22 -to GPIO[7]
+set_location_assignment PIN_E21 -to GPIO[8]
+set_location_assignment PIN_E22 -to GPIO[9]
+set_location_assignment PIN_Y4 -to GPIO[10]
+set_location_assignment PIN_AA1 -to GPIO[11]
+set_location_assignment PIN_Y3 -to GPIO[12]
+set_location_assignment PIN_Y2 -to GPIO[13]
+set_location_assignment PIN_Y1 -to GPIO[14]
+set_location_assignment PIN_AA2 -to GPIO[15]
+set_location_assignment PIN_T22 -to GPIO[16]
+set_location_assignment PIN_AA21 -to GPIO[17]
+set_location_assignment PIN_T21 -to GPIO[18]
+set_location_assignment PIN_T19 -to GPIO[19]
+set_location_assignment PIN_U22 -to GPIO[20]
+set_location_assignment PIN_AA22 -to GPIO[21]
+set_location_assignment PIN_U21 -to GPIO[22]
+set_location_assignment PIN_T20 -to GPIO[23]
+
+#============================================================
+# TMD
+#============================================================
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TMD_D[0]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TMD_D[1]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TMD_D[2]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TMD_D[3]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TMD_D[4]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TMD_D[5]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TMD_D[6]
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TMD_D[7]
+#set_location_assignment PIN_AB8  -to TMD_D[0]
+#set_location_assignment PIN_AA8  -to TMD_D[1]
+#set_location_assignment PIN_AA5  -to TMD_D[2]
+#set_location_assignment PIN_AB5  -to TMD_D[3]
+#set_location_assignment PIN_AB7  -to TMD_D[4]
+#set_location_assignment PIN_AA7  -to TMD_D[5]
+#set_location_assignment PIN_AB6  -to TMD_D[6]
+#set_location_assignment PIN_AA6  -to TMD_D[7
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SIF_SPI_CS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SIF_SPI_SCK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SIF_SPI_MISO
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SIF_SPI_MOSI
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SIF_UART_RX
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SIF_I2C_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SIF_UART_TX
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SIF_I2C_SDA
+set_location_assignment PIN_AB8 -to SIF_SPI_MISO
+set_location_assignment PIN_AA8 -to SIF_SPI_MOSI
+set_location_assignment PIN_AA5 -to SIF_UART_TX
+set_location_assignment PIN_AB5 -to SIF_I2C_SCL
+set_location_assignment PIN_AB7 -to SIF_SPI_CS
+set_location_assignment PIN_AA7 -to SIF_SPI_SCK
+set_location_assignment PIN_AB6 -to SIF_UART_RX
+set_location_assignment PIN_AA6 -to SIF_I2C_SDA
+
+#============================================================
+# EX
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EX_LED_RGB_D
+set_location_assignment PIN_D18 -to EX_LED_RGB_D
+
+#============================================================
+# OB
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OB_LED_RGB_D
+set_location_assignment PIN_D19 -to OB_LED_RGB_D
+
+#============================================================
+# QSPI
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to QSPI_FLASH_SCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to QSPI_FLASH_DATA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to QSPI_FLASH_DATA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to QSPI_FLASH_DATA[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to QSPI_FLASH_DATA[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to QSPI_FLASH_CE_n
+set_location_assignment PIN_P19 -to QSPI_FLASH_SCLK
+set_location_assignment PIN_P21 -to QSPI_FLASH_DATA[0]
+set_location_assignment PIN_P18 -to QSPI_FLASH_DATA[1]
+set_location_assignment PIN_R18 -to QSPI_FLASH_DATA[2]
+set_location_assignment PIN_P20 -to QSPI_FLASH_DATA[3]
+set_location_assignment PIN_L22 -to QSPI_FLASH_CE_n
+
+#============================================================
+# RISCV
+#============================================================
+set_instance_assignment -name IO_STANDARD "2.5 V" -to RISCV_JTAG_TCK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to RISCV_JTAG_TDI
+set_instance_assignment -name IO_STANDARD "2.5 V" -to RISCV_JTAG_TDO
+set_instance_assignment -name IO_STANDARD "2.5 V" -to RISCV_JTAG_TMS
+set_location_assignment PIN_C7 -to RISCV_JTAG_TCK
+set_location_assignment PIN_B7 -to RISCV_JTAG_TDI
+set_location_assignment PIN_A6 -to RISCV_JTAG_TDO
+set_location_assignment PIN_C8 -to RISCV_JTAG_TMS
+
+
+
+#============================================================
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+set_global_assignment -name VERILOG_FILE config.v
+set_global_assignment -name VERILOG_FILE e203_defines.v
+set_global_assignment -name VERILOG_FILE rtl/subsys/e203_subsys_top.v
+set_global_assignment -name VERILOG_FILE rtl/subsys/e203_subsys_pllclkdiv.v
+set_global_assignment -name VERILOG_FILE rtl/subsys/e203_subsys_pll.v
+set_global_assignment -name VERILOG_FILE rtl/subsys/e203_subsys_plic.v
+set_global_assignment -name VERILOG_FILE rtl/subsys/e203_subsys_perips.v
+set_global_assignment -name VERILOG_FILE rtl/subsys/e203_subsys_mems.v
+set_global_assignment -name VERILOG_FILE rtl/subsys/e203_subsys_main.v
+set_global_assignment -name VERILOG_FILE rtl/subsys/e203_subsys_hclkgen_rstsync.v
+set_global_assignment -name VERILOG_FILE rtl/subsys/e203_subsys_hclkgen.v
+set_global_assignment -name VERILOG_FILE rtl/subsys/e203_subsys_gfcm.v
+set_global_assignment -name VERILOG_FILE rtl/subsys/e203_subsys_clint.v
+set_global_assignment -name VERILOG_FILE rtl/soc/e203_soc_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_wdog.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_uarttx.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_uartrx.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_uartgpioport.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_uart_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_uart.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_tlwidthwidget_qspi.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_tlfragmenter_qspi_1.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_tl_repeater_5.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_spigpioport_2.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_spigpioport_1.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_spigpioport.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_spi_flashmap.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_rtc.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_ResetCatchAndSync_2.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_ResetCatchAndSync.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_repeater_6.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_queue_1.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_queue.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_qspi_physical_2.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_qspi_physical_1.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_qspi_physical.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_qspi_media_2.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_qspi_media_1.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_qspi_media.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_qspi_fifo.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_qspi_arbiter.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_qspi_4cs_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_qspi_4cs.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_qspi_1cs_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_qspi_1cs.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_pwmgpioport.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_pwm16_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_pwm16_core.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_pwm16.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_pwm8_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_pwm8_core.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_pwm8.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_pmu_core.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_pmu.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_plic_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_plic_man.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_otp_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_LevelGateway.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_jtaggpioport.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_hclkgen_regs.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_gpio_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_gpio.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_flash_qspi_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_flash_qspi.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_expl_axi_slv.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_expl_apb_slv.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_DeglitchShiftRegister.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_clint_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_clint.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_AsyncResetRegVec_129.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_AsyncResetRegVec_67.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_AsyncResetRegVec_36.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_AsyncResetRegVec_1.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_AsyncResetRegVec.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_AsyncResetReg.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_aon_wrapper.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_aon_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_aon_porrst.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_aon_lclkgen_regs.v
+set_global_assignment -name VERILOG_FILE rtl/perips/sirv_aon.v
+set_global_assignment -name VERILOG_FILE rtl/perips/i2c_master_top.v
+set_global_assignment -name VERILOG_FILE rtl/perips/i2c_master_defines.v
+set_global_assignment -name VERILOG_FILE rtl/perips/i2c_master_byte_ctrl.v
+set_global_assignment -name VERILOG_FILE rtl/perips/i2c_master_bit_ctrl.v
+set_global_assignment -name VERILOG_FILE rtl/mems/sirv_mrom_top.v
+set_global_assignment -name VERILOG_FILE rtl/mems/sirv_mrom.v
+set_global_assignment -name VERILOG_FILE rtl/general/sirv_sram_icb_ctrl.v
+set_global_assignment -name VERILOG_FILE rtl/general/sirv_sim_ram.v
+set_global_assignment -name VERILOG_FILE rtl/general/sirv_gnrl_xchecker.v
+set_global_assignment -name VERILOG_FILE rtl/general/sirv_gnrl_ram.v
+set_global_assignment -name VERILOG_FILE rtl/general/sirv_gnrl_icbs.v
+set_global_assignment -name VERILOG_FILE rtl/general/sirv_gnrl_dffs.v
+set_global_assignment -name VERILOG_FILE rtl/general/sirv_gnrl_bufs.v
+set_global_assignment -name VERILOG_FILE rtl/general/sirv_1cyc_sram_ctrl.v
+set_global_assignment -name VERILOG_FILE rtl/fab/sirv_icb1to16_bus.v
+set_global_assignment -name VERILOG_FILE rtl/fab/sirv_icb1to8_bus.v
+set_global_assignment -name VERILOG_FILE rtl/fab/sirv_icb1to2_bus.v
+set_global_assignment -name VERILOG_FILE rtl/debug/sirv_jtag_dtm.v
+set_global_assignment -name VERILOG_FILE rtl/debug/sirv_debug_rom.v
+set_global_assignment -name VERILOG_FILE rtl/debug/sirv_debug_ram.v
+set_global_assignment -name VERILOG_FILE rtl/debug/sirv_debug_module.v
+set_global_assignment -name VERILOG_FILE rtl/debug/sirv_debug_csr.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_srams.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_reset_ctrl.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_lsu_ctrl.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_lsu.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_itcm_ram.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_itcm_ctrl.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_irq_sync.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_ifu_minidec.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_ifu_litebpu.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_ifu_ift2icb.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_ifu_ifetch.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_ifu.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_wbck.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_regfile.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_oitf.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_longpwbck.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_excp.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_disp.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_decode.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_csr.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_commit.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_branchslv.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_alu_rglr.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_alu_muldiv.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_alu_lsuagu.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_alu_dpath.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_alu_csrctrl.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_alu_bjp.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu_alu.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_exu.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_extend_csr.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_dtcm_ram.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_dtcm_ctrl.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_cpu_top.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_cpu.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_core.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_clkgate.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_clk_ctrl.v
+set_global_assignment -name VERILOG_FILE rtl/core/e203_biu.v
+set_global_assignment -name VERILOG_FILE clkdivider.v
+set_global_assignment -name SDC_FILE T_CORE.sdc
+set_global_assignment -name VERILOG_FILE e203_soc.v
+set_global_assignment -name QIP_FILE pll/pll_8m388/pll_8m388.qip
+set_global_assignment -name QIP_FILE pll/pll_16m/pll_16m.qip
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
