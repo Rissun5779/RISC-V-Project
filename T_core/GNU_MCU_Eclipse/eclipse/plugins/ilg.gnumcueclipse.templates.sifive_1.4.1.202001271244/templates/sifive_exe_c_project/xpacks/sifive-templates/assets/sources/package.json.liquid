@@ -1,0 +1,75 @@
+{
+  "name": "{{ projectName }}",
+  "version": "1.0.0",
+  "description": "An xPack with a {{ content }} application running on {{ boardDescription }}",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "xmake build -- all",
+    "clean": "xmake build -- clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<user-id>/{{ projectName }}.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<user-id>/{{ projectName }}/issues"
+  },
+  "homepage": "https://github.com/<user-id>/{{ projectName }}",
+  "keywords": [
+    "xpack",
+    "c",
+    "c++",
+    "micro-os-plus",
+    "risc-v",
+    "sifive",
+    "corecomplex"
+  ],
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "contributors": [
+    {
+      "name": "Liviu Ionescu",
+      "email": "ilg@livius.net",
+      "url": "http://liviusdotnet.wordpress.com"
+    }
+  ],
+  "license": "MIT",
+  "config": {
+    "xcdl": {
+      "device": {
+        "id": "{{ deviceName }}",
+        "supplier": {
+          "displayName": "SiFive",
+          "id": "1"
+        }
+      },
+      "board": {
+        "id": "{{ boardName }}",
+        "supplier": {
+          "displayName": "SiFive",
+          "id": "1"
+        }
+      }
+    }
+  },
+  "dependencies": {
+      "@micro-os-plus/diag-trace": "~1.0.6"
+{% if boardName == 'hifive1' -%}
+      ,"@sifive/hifive1-board": "~1.0.3"
+{% elsif boardName == 'e31arty' or boardName == 'e51arty' -%}
+      ,"@sifive/arty-boards": "~1.0.2"
+{% endif -%}
+  },
+  "devDependencies": {
+    "xmake": "~0.3.9",
+    "@gnu-mcu-eclipse/riscv-none-gcc": "~7.2.0-2.1",
+    "@gnu-mcu-eclipse/openocd": "~0.10.0-7.1",
+    "@gnu-mcu-eclipse/windows-build-tools": "~2.10.1"
+  },
+  "xpack": {
+  }
+}

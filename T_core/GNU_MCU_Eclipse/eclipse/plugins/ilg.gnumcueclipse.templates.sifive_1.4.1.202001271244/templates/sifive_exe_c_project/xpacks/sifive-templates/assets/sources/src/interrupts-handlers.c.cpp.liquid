@@ -1,0 +1,244 @@
+/*
+ * This file is part of the µOS++ distribution.
+ *   (https://github.com/micro-os-plus)
+ * Copyright (c) 2017 Liviu Ionescu.
+ *
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom
+ * the Software is furnished to do so, subject to the following
+ * conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+#include <micro-os-plus/board.h>
+#include <micro-os-plus/diag/trace.h>
+#include <sysclock.h>
+
+{% if language == 'cpp' -%}
+using namespace os;
+
+{% elsif language == 'c' -%}
+#include <stdbool.h>
+
+{% endif -%}
+// ----------------------------------------------------------------------------
+
+/**
+ * In µOS++, the interrupt processing uses fixed names functions for each
+ * interrupt handler. Defining a C function with one of the reserved names
+ * is all the developer must do, forwarding the interrupt to the handler
+ * is automatically handled by the system.
+ *
+ * There are two types of handlers, global and local:
+ *
+ * - `riscv_interrupt_handle_local_*`
+ * - `riscv_interrupt_handle_global_*`
+ *
+ * Some definitions are part of the architecture package, some are part 
+ * of the device package.
+ *
+ * The system provides weak defaults for all handlers; to help debugging,
+ * these default handlers break to the debugger.
+ */
+
+// ----------------------------------------------------------------------------
+
+{% if language == 'cpp' -%}
+
+#if !defined(OS_USE_CPP_INTERRUPTS)
+#error "Define OS_USE_CPP_INTERRUPTS to use namespaces."
+#endif
+
+namespace riscv
+{
+  namespace interrupt
+  {
+
+    void
+    handle_machine_timer (void)
+{% assign i = '    ' -%}
+{% else -%}
+void
+riscv_interrupt_handle_machine_timer (void)
+{% assign i = '' -%}
+{% endif -%}
+{{ i }}{
+{{ i }}  // Disable M timer interrupt.
+{% if language == 'cpp' -%}
+{{ i }}  riscv::csr::clear_mie_bits (RISCV_CSR_MIP_MTIP);
+
+{{ i }}  uint64_t tim = riscv::device::mtime ();
+{% elsif language == 'c' -%}
+{{ i }}  riscv_csr_clear_mie_bits (RISCV_CSR_MIP_MTIP);
+
+{{ i }}  uint64_t tim = riscv_device_read_mtime ();
+{% endif -%}
+{{ i }}  uint64_t cmp;
+
+{{ i }}  // The simple method to compute mtimecmp by adding a value to the
+{{ i }}  // current mtime might not be accurate in case
+{{ i }}  // the sysclock frequency is not a divisor of RTC frequency,
+{{ i }}  // like 1000 Hz with a typical 32768 Hz RTC.
+{{ i }}  //
+{{ i }}  // A better way is to advance one or more ticks and recompute
+{{ i }}  // the comparator; this continuous computation should spread the error
+{{ i }}  // over time, to produce a fairly accurate clock. In the usual
+{{ i }}  // case the comparator will advance with either 32 or 33 ticks,
+{{ i }}  // uniformly distributed.
+{{ i }}  //
+{{ i }}  // The disadvantage is that it uses 64-bits operations, and might
+{{ i }}  // not produce accurate results at very high values.
+{{ i }}  // The variable duration will add an occasional jitter of the
+{{ i }}  // system clock, but this should not be a problem.
+{{ i }}  do
+{{ i }}    {
+{% if language == 'cpp' -%}
+{{ i }}      sysclock.internal_increment_count ();
+{{ i }}      cmp = sysclock.steady_now () * riscv::board::rtc_frequency_hz ()
+{{ i }}          / sysclock.frequency_hz;
+{% elsif language == 'c' -%}
+{{ i }}      os_sysclock_internal_increment_count ();
+{{ i }}       cmp = os_sysclock_steady_now () * riscv_board_get_rtc_frequency_hz ()
+{{ i }}           / os_sysclock_get_frequency_hz ();
+{% endif -%}
+{{ i }}    }
+{{ i }}  while (cmp <= tim);
+
+{{ i }}  // The interrupt remains posted until it is cleared by writing
+{{ i }}  // the mtimecmp register.
+{% if language == 'cpp' -%}
+{{ i }}  riscv::device::mtimecmp (cmp);
+
+{{ i }}  // trace::putchar('.');
+{% elsif language == 'c' -%}
+{{ i }}  riscv_device_write_mtimecmp (cmp);
+
+{{ i }}  // trace_putchar('.');
+{% endif -%}
+
+{{ i }}  // Enable M timer interrupt.
+{% if language == 'cpp' -%}
+{{ i }}  riscv::csr::set_mie_bits (RISCV_CSR_MIP_MTIP);
+{% elsif language == 'c' -%}
+{{ i }}  riscv_csr_set_mie_bits (RISCV_CSR_MIP_MTIP);
+{% endif -%}
+{% if language == 'cpp' -%}
+    }
+
+  } /* namespace interrupt */
+} /* namespace riscv */
+{% else -%}
+}
+{% endif -%}
+
+{% if content == 'blinky' -%}
+extern bool button_pushed;
+extern bool button_released;
+
+{% if language == 'cpp' -%}
+namespace sifive
+{
+  namespace {{ deviceName }}
+  {
+    namespace interrupt
+    {
+
+{% if boardName == 'hifive1' -%}
+      // The button is connected to GPIO18, active low.
+      void
+      handle_global_gpio18 (void)
+{% elsif boardName == 'e31arty' -%}
+      // The button is connected to GPIO4, active high.
+      void
+      handle_global_gpio4 (void)
+{% elsif boardName == 'e51arty' -%}
+      // The button is connected to GPIO4, active high.
+      void
+      handle_global_gpio4 (void)
+{% endif -%}
+{% assign i = '      ' -%}
+{% else -%}
+{% if boardName == 'hifive1' -%}
+// The button is connected to GPIO18, active low.
+void
+sifive_{{ deviceName }}_interrupt_handle_global_gpio18 (void)
+{% elsif boardName == 'e31arty' -%}
+// The button is connected to GPIO4, active high.
+void
+sifive_{{ deviceName }}_interrupt_handle_global_gpio4 (void)
+{% elsif boardName == 'e51arty' -%}
+// The button is connected to GPIO4, active high.
+void
+sifive_{{ deviceName }}_interrupt_handle_global_gpio4 (void)
+{% endif -%}
+{% assign i = '' -%}
+{% endif -%}
+{{ i }}{
+{{ i }}  if (GPIO->riseip & (1 << BUTTON_0_OFFSET))
+{{ i }}    {
+{% if boardName == 'hifive1' -%}
+{% if language == 'cpp' -%}
+{{ i }}      trace::putchar ('u');
+{% elsif language == 'c' -%}
+{{ i }}      trace_putchar ('u');
+{% endif -%}
+{{ i }}      button_released = true;
+{% elsif boardName == 'e31arty' or  boardName == 'e51arty' -%}
+{% if language == 'cpp' -%}
+{{ i }}      trace::putchar ('d');
+{% elsif language == 'c' -%}
+{{ i }}      trace_putchar ('d');
+{% endif -%}
+{{ i }}      button_pushed = true;
+{% endif -%}
+
+{{ i }}      // Clear rising interrupt.
+{{ i }}      GPIO->riseip |= (1 << BUTTON_0_OFFSET);
+{{ i }}    }
+
+{{ i }}  if (GPIO->fallip & (1 << BUTTON_0_OFFSET))
+{{ i }}    {
+{% if boardName == 'hifive1' -%}
+{% if language == 'cpp' -%}
+{{ i }}      trace::putchar ('d');
+{% elsif language == 'c' -%}
+{{ i }}      trace_putchar ('d');
+{% endif -%}
+{{ i }}      button_pushed = true;
+{% elsif boardName == 'e31arty' or  boardName == 'e51arty' -%}
+{% if language == 'cpp' -%}
+{{ i }}      trace::putchar ('u');
+{% elsif language == 'c' -%}
+{{ i }}      trace_putchar ('u');
+{% endif -%}
+{{ i }}      button_released = true;
+{% endif -%}
+
+{{ i }}      // Clear falling interrupt.
+{{ i }}      GPIO->fallip |= (1 << BUTTON_0_OFFSET);
+{{ i }}    }
+{{ i }}}
+
+{% if language == 'cpp' -%}
+    } /* namespace interrupt */
+  } /* namespace {{ deviceName }} */
+} /* namespace sifive */
+
+{% endif -%}
+{% endif -%}
+// ----------------------------------------------------------------------------

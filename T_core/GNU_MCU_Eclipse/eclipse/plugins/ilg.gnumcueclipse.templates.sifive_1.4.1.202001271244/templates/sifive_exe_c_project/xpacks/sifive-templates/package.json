@@ -1,0 +1,55 @@
+{
+  "name": "@sifive/templates",
+  "version": "1.2.1",
+  "description": "An xPack with templates to generate SiFive Core Complex projects",
+  "main": "./index.js",
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "bin": {
+    "xpm-init-sifive-project": "./bin/xpm-init-sifive-project.js"
+  },
+  "scripts": {
+    "test": "./test/test.js",
+    "test-all": "./test/test.js all",
+    "fix": "standard --fix",
+    "link": "npm link @ilg/cli-start-options; npm link @ilg/es6-promisifier"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micro-os-plus/sifive-templates-xpack.git"
+  },
+  "keywords": [
+    "c++",
+    "templates",
+    "corecomplex"
+  ],
+  "author": {
+    "name": "Liviu Ionescu",
+    "email": "ilg@livius.net",
+    "url": "http://liviusdotnet.wordpress.com"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/micro-os-plus/sifive-templates-xpack/issues"
+  },
+  "homepage": "https://github.com/micro-os-plus/sifive-templates-xpack",
+  "dependencies": {
+    "@ilg/es6-promisifier": "~0.1.9",
+    "@ilg/cli-start-options": "~0.4.0",
+    "liquidjs": "~1.9.6",
+    "shelljs": "~0.7.8",
+    "readline-sync": "~1.4.7"
+  },
+  "devDependencies": {
+    "standard": "~10.0.3"
+  },
+  "peerDependencies": {},
+  "bundledDependencies": [],
+  "optionalDependencies": {},
+  "config": {},
+  "xpack": {}
+}

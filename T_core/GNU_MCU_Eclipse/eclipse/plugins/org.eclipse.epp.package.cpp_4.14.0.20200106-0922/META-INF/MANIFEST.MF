@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.epp.package.cpp;singleton:=true
+Built-By: ilg
+Require-Bundle: org.eclipse.platform,org.eclipse.equinox.app
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/epp/or
+ g.eclipse.epp.packages.git;path="packages/org.eclipse.epp.package.cpp
+ ";tag="v4.7.1-20200115-2019-12";commitId=ef57662b831065463c301b1696d6
+ 80d75456d5b7
+Bundle-Vendor: Eclipse Packaging Project
+Bundle-Name: EPP CPP Bundle
+Bundle-Version: 4.14.0.20200106-0922
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.6.3
+Build-Jdk: 1.8.0_231
+Eclipse-BundleShape: dir
+
