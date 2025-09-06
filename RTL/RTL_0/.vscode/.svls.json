@@ -1,0 +1,7 @@
+{
+  "svls.project": "RTL_0",
+  "svls.includeIndexing": true,
+  "svls.files": [
+    "../RTL/**/*.v"
+  ]
+}

@@ -1,0 +1,4 @@
+BEGIN 1:fpu_0:fast:work
+    state :  1:fpu_comprehensive_tb:fast:work
+    next_state :  1:fpu_comprehensive_tb:fast:work
+END 

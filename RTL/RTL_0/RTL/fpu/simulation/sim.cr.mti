@@ -1,0 +1,22 @@
+/home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/simulation/fadd_s.v {1 {vlog -work work -vopt -stats=none /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/simulation/fadd_s.v
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module fadd_s
+
+Top level modules:
+	fadd_s
+
+} {} {}} /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/simulation/fpu_0.v {1 {vlog -work work -vopt -stats=none /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/simulation/fpu_0.v
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module fpu_0
+
+Top level modules:
+	fpu_0
+
+} {} {}} /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/simulation/fpu_0_tb.v {1 {vlog -work work -vopt -stats=none /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/simulation/fpu_0_tb.v
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module fpu_comprehensive_tb
+
+Top level modules:
+	fpu_comprehensive_tb
+
+} {} {}}

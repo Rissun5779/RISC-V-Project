@@ -1,0 +1,86 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do fpu_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work rtl_work 
+# Copying /home/rissun57/intelFPGA_lite/24.1std/questa_fse/linux_x86_64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu {/home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fadd_s.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 16:23:57 on Sep 02,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu" /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fadd_s.v 
+# -- Compiling module fadd_s
+# 
+# Top level modules:
+# 	fadd_s
+# End time: 16:23:57 on Sep 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu {/home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 16:23:57 on Sep 02,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu" /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v 
+# -- Compiling module fpu_0
+# 
+# Top level modules:
+# 	fpu_0
+# End time: 16:23:57 on Sep 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu {/home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0_tb.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 16:23:57 on Sep 02,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu" /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0_tb.v 
+# -- Compiling module fpu_comprehensive_tb
+# 
+# Top level modules:
+# 	fpu_comprehensive_tb
+# End time: 16:23:57 on Sep 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  fpu_0_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" fpu_0_tb 
+# Start time: 16:23:57 on Sep 02,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Error: (vopt-11) Could not find work.fpu_0_tb.
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./fpu_run_msim_rtl_verilog.do PAUSED at line 13
+vsim work.fpu_comprehensive_tb
+# vsim work.fpu_comprehensive_tb 
+# Start time: 16:23:57 on Sep 02,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.fpu_comprehensive_tb(fast)
+add wave -position insertpoint sim:/fpu_comprehensive_tb/reset_system/*
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/fpu_comprehensive_tb/reset_system/*'.
+add wave -position insertpoint sim:/fpu_comprehensive_tb/test_flw/*
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/fpu_comprehensive_tb/test_flw/*'.
+add wave -position insertpoint sim:/fpu_comprehensive_tb/test_fsw/*
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/fpu_comprehensive_tb/test_fsw/*'.
+add wave -position insertpoint sim:/fpu_comprehensive_tb/test_fadd/*
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/fpu_comprehensive_tb/test_fadd/*'.
+add wave -position insertpoint sim:/fpu_comprehensive_tb/wait_cycles/*
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/fpu_comprehensive_tb/wait_cycles/*'.
+# End time: 16:25:46 on Sep 02,2025, Elapsed time: 0:01:49
+# Errors: 1, Warnings: 1

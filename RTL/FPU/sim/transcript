@@ -1,0 +1,9 @@
+# vsim -c work.fpu_0_tb -do "run -all; quit" 
+# Start time: 23:09:09 on Sep 04,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: (vopt-11) Could not find work.fpu_0_tb.
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 23:09:09 on Sep 04,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

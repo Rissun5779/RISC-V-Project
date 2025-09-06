@@ -1,0 +1,51 @@
+$date
+	Thu Aug 28 16:11:40 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module adder2_top_tb $end
+$var wire 4 ! res [3:0] $end
+$var reg 3 " A [2:0] $end
+$var reg 3 # B [2:0] $end
+$scope module uut $end
+$var wire 3 $ A [2:0] $end
+$var wire 3 % B [2:0] $end
+$var wire 4 & res [3:0] $end
+$scope module uut $end
+$var wire 3 ' A [2:0] $end
+$var wire 3 ( B [2:0] $end
+$var wire 4 ) res [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b1 #
+b1 %
+b1 (
+b11 !
+b11 &
+b11 )
+b10 "
+b10 $
+b10 '
+#110

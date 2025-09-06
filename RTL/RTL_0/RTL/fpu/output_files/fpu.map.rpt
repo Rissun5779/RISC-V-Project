@@ -1,0 +1,621 @@
+Analysis & Synthesis report for fpu
+Tue Sep  2 16:16:21 2025
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |fpu_0|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |fpu_0
+ 13. Port Connectivity Checks: "fadd_s:fadd_s"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Sep  2 16:16:21 2025           ;
+; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
+; Revision Name                   ; fpu                                             ;
+; Top-level Entity Name           ; fpu_0                                           ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 418                                             ;
+; Total pins                      ; 355                                             ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC9E7F35C8     ;                    ;
+; Top-level entity name                                                           ; fpu_0              ; fpu                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; fadd_s.v                         ; yes             ; User Verilog HDL File  ; /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fadd_s.v ;         ;
+; fpu_0.v                          ; yes             ; User Verilog HDL File  ; /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v  ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 432       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 606       ;
+;     -- 7 input functions                    ; 3         ;
+;     -- 6 input functions                    ; 222       ;
+;     -- 5 input functions                    ; 106       ;
+;     -- 4 input functions                    ; 109       ;
+;     -- <=3 input functions                  ; 166       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 418       ;
+;                                             ;           ;
+; I/O pins                                    ; 355       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 418       ;
+; Total fan-out                               ; 4796      ;
+; Average fan-out                             ; 2.77      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------+-------------+--------------+
+; |fpu_0                     ; 606 (87)            ; 418 (252)                 ; 0                 ; 0          ; 355  ; 0            ; |fpu_0               ; fpu_0       ; work         ;
+;    |fadd_s:fadd_s|         ; 519 (519)           ; 166 (166)                 ; 0                 ; 0          ; 0    ; 0            ; |fpu_0|fadd_s:fadd_s ; fadd_s      ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |fpu_0|state                                                                                                                                                                                                                                                                                                  ;
++------------------------+-----------------------+-------------------+--------------------+----------------------+------------------------+------------------------+----------------------+--------------------+-----------------------+-----------------------+------------------------+------------------------+--------------+
+; Name                   ; state.S_FADD_COMPLETE ; state.S_FADD_WAIT ; state.S_FADD_START ; state.S_FSW_COMPLETE ; state.S_FSW_WAIT_READY ; state.S_FSW_MEM_ACCESS ; state.S_FLW_COMPLETE ; state.S_FLW_SAMPLE ; state.S_FLW_STABILIZE ; state.S_FLW_WAIT_DATA ; state.S_FLW_WAIT_READY ; state.S_FLW_MEM_ACCESS ; state.S_NONE ;
++------------------------+-----------------------+-------------------+--------------------+----------------------+------------------------+------------------------+----------------------+--------------------+-----------------------+-----------------------+------------------------+------------------------+--------------+
+; state.S_NONE           ; 0                     ; 0                 ; 0                  ; 0                    ; 0                      ; 0                      ; 0                    ; 0                  ; 0                     ; 0                     ; 0                      ; 0                      ; 0            ;
+; state.S_FLW_MEM_ACCESS ; 0                     ; 0                 ; 0                  ; 0                    ; 0                      ; 0                      ; 0                    ; 0                  ; 0                     ; 0                     ; 0                      ; 1                      ; 1            ;
+; state.S_FLW_WAIT_READY ; 0                     ; 0                 ; 0                  ; 0                    ; 0                      ; 0                      ; 0                    ; 0                  ; 0                     ; 0                     ; 1                      ; 0                      ; 1            ;
+; state.S_FLW_WAIT_DATA  ; 0                     ; 0                 ; 0                  ; 0                    ; 0                      ; 0                      ; 0                    ; 0                  ; 0                     ; 1                     ; 0                      ; 0                      ; 1            ;
+; state.S_FLW_STABILIZE  ; 0                     ; 0                 ; 0                  ; 0                    ; 0                      ; 0                      ; 0                    ; 0                  ; 1                     ; 0                     ; 0                      ; 0                      ; 1            ;
+; state.S_FLW_SAMPLE     ; 0                     ; 0                 ; 0                  ; 0                    ; 0                      ; 0                      ; 0                    ; 1                  ; 0                     ; 0                     ; 0                      ; 0                      ; 1            ;
+; state.S_FLW_COMPLETE   ; 0                     ; 0                 ; 0                  ; 0                    ; 0                      ; 0                      ; 1                    ; 0                  ; 0                     ; 0                     ; 0                      ; 0                      ; 1            ;
+; state.S_FSW_MEM_ACCESS ; 0                     ; 0                 ; 0                  ; 0                    ; 0                      ; 1                      ; 0                    ; 0                  ; 0                     ; 0                     ; 0                      ; 0                      ; 1            ;
+; state.S_FSW_WAIT_READY ; 0                     ; 0                 ; 0                  ; 0                    ; 1                      ; 0                      ; 0                    ; 0                  ; 0                     ; 0                     ; 0                      ; 0                      ; 1            ;
+; state.S_FSW_COMPLETE   ; 0                     ; 0                 ; 0                  ; 1                    ; 0                      ; 0                      ; 0                    ; 0                  ; 0                     ; 0                     ; 0                      ; 0                      ; 1            ;
+; state.S_FADD_START     ; 0                     ; 0                 ; 1                  ; 0                    ; 0                      ; 0                      ; 0                    ; 0                  ; 0                     ; 0                     ; 0                      ; 0                      ; 1            ;
+; state.S_FADD_WAIT      ; 0                     ; 1                 ; 0                  ; 0                    ; 0                      ; 0                      ; 0                    ; 0                  ; 0                     ; 0                     ; 0                      ; 0                      ; 1            ;
+; state.S_FADD_COMPLETE  ; 1                     ; 0                 ; 0                  ; 0                    ; 0                      ; 0                      ; 0                    ; 0                  ; 0                     ; 0                     ; 0                      ; 0                      ; 1            ;
++------------------------+-----------------------+-------------------+--------------------+----------------------+------------------------+------------------------+----------------------+--------------------+-----------------------+-----------------------+------------------------+------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++----------------------------------------+-----------------------------------------------+
+; Register name                          ; Reason for Removal                            ;
++----------------------------------------+-----------------------------------------------+
+; reg_wb_enable~reg0                     ; Stuck at GND due to stuck port data_in        ;
+; fadd_s:fadd_s|man_st1_x1[24]           ; Stuck at GND due to stuck port data_in        ;
+; fadd_s:fadd_s|man_st1_x2[24]           ; Stuck at GND due to stuck port data_in        ;
+; fadd_s:fadd_s|man_pre_norm_st2[26]     ; Stuck at GND due to stuck port data_in        ;
+; fadd_s:fadd_s|man_st1_x1[22]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[22] ;
+; fadd_s:fadd_s|man_st1_x2[22]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[22] ;
+; fadd_s:fadd_s|man_st1_x1[21]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[21] ;
+; fadd_s:fadd_s|man_st1_x2[21]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[21] ;
+; fadd_s:fadd_s|man_st1_x1[20]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[20] ;
+; fadd_s:fadd_s|man_st1_x2[20]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[20] ;
+; fadd_s:fadd_s|man_st1_x1[19]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[19] ;
+; fadd_s:fadd_s|man_st1_x2[19]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[19] ;
+; fadd_s:fadd_s|man_st1_x1[18]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[18] ;
+; fadd_s:fadd_s|man_st1_x2[18]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[18] ;
+; fadd_s:fadd_s|man_st1_x1[17]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[17] ;
+; fadd_s:fadd_s|man_st1_x2[17]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[17] ;
+; fadd_s:fadd_s|man_st1_x1[16]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[16] ;
+; fadd_s:fadd_s|man_st1_x2[16]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[16] ;
+; fadd_s:fadd_s|man_st1_x1[15]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[15] ;
+; fadd_s:fadd_s|man_st1_x2[15]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[15] ;
+; fadd_s:fadd_s|man_st1_x1[14]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[14] ;
+; fadd_s:fadd_s|man_st1_x2[14]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[14] ;
+; fadd_s:fadd_s|man_st1_x1[13]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[13] ;
+; fadd_s:fadd_s|man_st1_x2[13]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[13] ;
+; fadd_s:fadd_s|man_st1_x1[12]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[12] ;
+; fadd_s:fadd_s|man_st1_x2[12]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[12] ;
+; fadd_s:fadd_s|man_st1_x1[11]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[11] ;
+; fadd_s:fadd_s|man_st1_x2[11]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[11] ;
+; fadd_s:fadd_s|man_st1_x1[10]           ; Merged with fadd_s:fadd_s|man_init_x1_st1[10] ;
+; fadd_s:fadd_s|man_st1_x2[10]           ; Merged with fadd_s:fadd_s|man_init_x2_st1[10] ;
+; fadd_s:fadd_s|man_st1_x1[9]            ; Merged with fadd_s:fadd_s|man_init_x1_st1[9]  ;
+; fadd_s:fadd_s|man_st1_x2[9]            ; Merged with fadd_s:fadd_s|man_init_x2_st1[9]  ;
+; fadd_s:fadd_s|man_st1_x1[8]            ; Merged with fadd_s:fadd_s|man_init_x1_st1[8]  ;
+; fadd_s:fadd_s|man_st1_x2[8]            ; Merged with fadd_s:fadd_s|man_init_x2_st1[8]  ;
+; fadd_s:fadd_s|man_st1_x1[7]            ; Merged with fadd_s:fadd_s|man_init_x1_st1[7]  ;
+; fadd_s:fadd_s|man_st1_x2[7]            ; Merged with fadd_s:fadd_s|man_init_x2_st1[7]  ;
+; fadd_s:fadd_s|man_st1_x1[6]            ; Merged with fadd_s:fadd_s|man_init_x1_st1[6]  ;
+; fadd_s:fadd_s|man_st1_x2[6]            ; Merged with fadd_s:fadd_s|man_init_x2_st1[6]  ;
+; fadd_s:fadd_s|man_st1_x1[5]            ; Merged with fadd_s:fadd_s|man_init_x1_st1[5]  ;
+; fadd_s:fadd_s|man_st1_x2[5]            ; Merged with fadd_s:fadd_s|man_init_x2_st1[5]  ;
+; fadd_s:fadd_s|man_st1_x1[4]            ; Merged with fadd_s:fadd_s|man_init_x1_st1[4]  ;
+; fadd_s:fadd_s|man_st1_x2[4]            ; Merged with fadd_s:fadd_s|man_init_x2_st1[4]  ;
+; fadd_s:fadd_s|man_st1_x1[3]            ; Merged with fadd_s:fadd_s|man_init_x1_st1[3]  ;
+; fadd_s:fadd_s|man_st1_x2[3]            ; Merged with fadd_s:fadd_s|man_init_x2_st1[3]  ;
+; fadd_s:fadd_s|man_st1_x1[2]            ; Merged with fadd_s:fadd_s|man_init_x1_st1[2]  ;
+; fadd_s:fadd_s|man_st1_x2[2]            ; Merged with fadd_s:fadd_s|man_init_x2_st1[2]  ;
+; fadd_s:fadd_s|man_st1_x1[1]            ; Merged with fadd_s:fadd_s|man_init_x1_st1[1]  ;
+; fadd_s:fadd_s|man_st1_x2[1]            ; Merged with fadd_s:fadd_s|man_init_x2_st1[1]  ;
+; fadd_s:fadd_s|man_st1_x1[0]            ; Merged with fadd_s:fadd_s|man_init_x1_st1[0]  ;
+; fadd_s:fadd_s|man_st1_x2[0]            ; Merged with fadd_s:fadd_s|man_init_x2_st1[0]  ;
+; state~4                                ; Lost fanout                                   ;
+; state~5                                ; Lost fanout                                   ;
+; state~6                                ; Lost fanout                                   ;
+; state~7                                ; Lost fanout                                   ;
+; fadd_s:fadd_s|exp_st1_x1[1]            ; Merged with fadd_s:fadd_s|exp_init_x1_st2[1]  ;
+; fadd_s:fadd_s|exp_st1_x1[2]            ; Merged with fadd_s:fadd_s|exp_init_x1_st2[2]  ;
+; fadd_s:fadd_s|exp_st1_x1[3]            ; Merged with fadd_s:fadd_s|exp_init_x1_st2[3]  ;
+; fadd_s:fadd_s|exp_st1_x1[4]            ; Merged with fadd_s:fadd_s|exp_init_x1_st2[4]  ;
+; fadd_s:fadd_s|exp_st1_x1[5]            ; Merged with fadd_s:fadd_s|exp_init_x1_st2[5]  ;
+; fadd_s:fadd_s|exp_st1_x1[6]            ; Merged with fadd_s:fadd_s|exp_init_x1_st2[6]  ;
+; fadd_s:fadd_s|exp_st1_x1[7]            ; Merged with fadd_s:fadd_s|exp_init_x1_st2[7]  ;
+; fadd_s:fadd_s|exp_st1_x2[6]            ; Merged with fadd_s:fadd_s|exp_init_x2_st2[6]  ;
+; fadd_s:fadd_s|exp_st1_x2[1]            ; Merged with fadd_s:fadd_s|exp_init_x2_st2[1]  ;
+; fadd_s:fadd_s|exp_st1_x2[2]            ; Merged with fadd_s:fadd_s|exp_init_x2_st2[2]  ;
+; fadd_s:fadd_s|exp_st1_x2[3]            ; Merged with fadd_s:fadd_s|exp_init_x2_st2[3]  ;
+; fadd_s:fadd_s|exp_st1_x2[4]            ; Merged with fadd_s:fadd_s|exp_init_x2_st2[4]  ;
+; fadd_s:fadd_s|exp_st1_x2[5]            ; Merged with fadd_s:fadd_s|exp_init_x2_st2[5]  ;
+; fadd_s:fadd_s|exp_st1_x2[7]            ; Merged with fadd_s:fadd_s|exp_init_x2_st2[7]  ;
+; Total Number of Removed Registers = 68 ;                                               ;
++----------------------------------------+-----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 418   ;
+; Number of registers using Synchronous Clear  ; 180   ;
+; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Asynchronous Clear ; 253   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 234   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |fpu_0|fadd_s:fadd_s|de_st1[3]                 ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |fpu_0|freg_wb_addr_reg[4]                     ;
+; 9:1                ; 22 bits   ; 132 LEs       ; 44 LEs               ; 88 LEs                 ; Yes        ; |fpu_0|freg_wb_data_reg[16]                    ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 40 LEs               ; 8 LEs                  ; Yes        ; |fpu_0|freg_wb_data_reg[23]                    ;
+; 25:1               ; 2 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |fpu_0|fadd_s:fadd_s|slz_st2[2]                ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftLeft1                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftLeft1                ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftLeft1                ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftLeft0                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftLeft0                ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftLeft0                ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|ShiftRight0               ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|man_pre_norm[23]          ;
+; 5:1                ; 11 bits   ; 33 LEs        ; 33 LEs               ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|man_y_finorm_unrounded[0] ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|man_y_norm[15]            ;
+; 11:1               ; 7 bits    ; 49 LEs        ; 49 LEs               ; 0 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|man_y_norm[17]            ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |fpu_0|Selector7                               ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |fpu_0|Selector3                               ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 24 LEs               ; 9 LEs                  ; No         ; |fpu_0|fadd_s:fadd_s|man_y_norm[25]            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |fpu_0 ;
++------------------+-------+--------------------------------------------+
+; Parameter Name   ; Value ; Type                                       ;
++------------------+-------+--------------------------------------------+
+; S_NONE           ; 0000  ; Unsigned Binary                            ;
+; S_FLW_MEM_ACCESS ; 0001  ; Unsigned Binary                            ;
+; S_FLW_WAIT_READY ; 0010  ; Unsigned Binary                            ;
+; S_FLW_WAIT_DATA  ; 0011  ; Unsigned Binary                            ;
+; S_FLW_STABILIZE  ; 0100  ; Unsigned Binary                            ;
+; S_FLW_SAMPLE     ; 0101  ; Unsigned Binary                            ;
+; S_FLW_COMPLETE   ; 0110  ; Unsigned Binary                            ;
+; S_FSW_MEM_ACCESS ; 0111  ; Unsigned Binary                            ;
+; S_FSW_WAIT_READY ; 1000  ; Unsigned Binary                            ;
+; S_FSW_COMPLETE   ; 1001  ; Unsigned Binary                            ;
+; S_FADD_START     ; 1010  ; Unsigned Binary                            ;
+; S_FADD_WAIT      ; 1011  ; Unsigned Binary                            ;
+; S_FADD_COMPLETE  ; 1100  ; Unsigned Binary                            ;
++------------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fadd_s:fadd_s"                                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; ovf  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 418                         ;
+;     CLR               ; 19                          ;
+;     ENA CLR           ; 210                         ;
+;     ENA CLR SCLR      ; 22                          ;
+;     ENA CLR SLD       ; 2                           ;
+;     SCLR              ; 158                         ;
+;     plain             ; 7                           ;
+; arriav_lcell_comb     ; 607                         ;
+;     arith             ; 141                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 17                          ;
+;         2 data inputs ; 50                          ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 39                          ;
+;         5 data inputs ; 26                          ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 445                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 51                          ;
+;         4 data inputs ; 69                          ;
+;         5 data inputs ; 80                          ;
+;         6 data inputs ; 222                         ;
+;     shared            ; 18                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 12                          ;
+;         4 data inputs ; 1                           ;
+; boundary_port         ; 355                         ;
+;                       ;                             ;
+; Max LUT depth         ; 11.60                       ;
+; Average LUT depth     ; 6.16                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+    Info: Processing started: Tue Sep  2 16:16:05 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fpu -c fpu
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file fadd_s.v
+    Info (12023): Found entity 1: fadd_s File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fadd_s.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fpu_0.v
+    Info (12023): Found entity 1: fpu_0 File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file fpu_0_tb.v
+    Info (12023): Found entity 1: fpu_comprehensive_tb File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file fpu.bdf
+    Info (12023): Found entity 1: fpu
+Info (12127): Elaborating entity "fpu_0" for the top level hierarchy
+Info (10264): Verilog HDL Case Statement information at fpu_0.v(187): all case item expressions in this case statement are onehot File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 187
+Info (10264): Verilog HDL Case Statement information at fpu_0.v(203): all case item expressions in this case statement are onehot File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 203
+Warning (10240): Verilog HDL Always Construct warning at fpu_0.v(156): inferring latch(es) for variable "reg_wb_addr", which holds its previous value in one or more paths through the always construct File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Warning (10240): Verilog HDL Always Construct warning at fpu_0.v(156): inferring latch(es) for variable "reg_wb_data", which holds its previous value in one or more paths through the always construct File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[0]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[1]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[2]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[3]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[4]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[5]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[6]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[7]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[8]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[9]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[10]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[11]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[12]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[13]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[14]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[15]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[16]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[17]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[18]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[19]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[20]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[21]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[22]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[23]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[24]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[25]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[26]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[27]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[28]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[29]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[30]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_data[31]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_addr[0]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_addr[1]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_addr[2]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_addr[3]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (10041): Inferred latch for "reg_wb_addr[4]" at fpu_0.v(156) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (12128): Elaborating entity "fadd_s" for hierarchy "fadd_s:fadd_s" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 103
+Warning (10036): Verilog HDL or VHDL warning at fadd_s.v(48): object "exp_norm_x2_i" assigned a value but never read File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fadd_s.v Line: 48
+Warning (10036): Verilog HDL or VHDL warning at fadd_s.v(52): object "ce" assigned a value but never read File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fadd_s.v Line: 52
+Warning (10036): Verilog HDL or VHDL warning at fadd_s.v(70): object "exp_init_x1_st1" assigned a value but never read File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fadd_s.v Line: 70
+Warning (10036): Verilog HDL or VHDL warning at fadd_s.v(71): object "exp_init_x2_st1" assigned a value but never read File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fadd_s.v Line: 71
+Warning (10036): Verilog HDL or VHDL warning at fadd_s.v(113): object "symbol_insigni" assigned a value but never read File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fadd_s.v Line: 113
+Warning (10036): Verilog HDL or VHDL warning at fadd_s.v(117): object "man_signi_ext" assigned a value but never read File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fadd_s.v Line: 117
+Warning (10230): Verilog HDL assignment warning at fadd_s.v(232): truncated value with size 32 to match size of target (8) File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fadd_s.v Line: 232
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "reg_wb_enable" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 72
+    Warning (13410): Pin "reg_wb_addr[0]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_addr[1]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_addr[2]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_addr[3]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_addr[4]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[0]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[1]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[2]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[3]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[4]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[5]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[6]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[7]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[8]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[9]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[10]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[11]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[12]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[13]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[14]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[15]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[16]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[17]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[18]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[19]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[20]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[21]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[22]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[23]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[24]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[25]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[26]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[27]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[28]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[29]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[30]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+    Warning (13410): Pin "reg_wb_data[31]" is stuck at GND File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 156
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 39 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "instr_fdiv" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 60
+    Warning (15610): No output dependent on input pin "instr_fmul" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 60
+    Warning (15610): No output dependent on input pin "reg_rs2[0]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[1]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[2]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[3]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[4]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[5]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[6]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[7]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[8]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[9]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[10]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[11]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[12]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[13]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[14]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[15]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[16]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[17]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[18]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[19]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[20]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[21]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[22]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[23]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[24]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[25]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[26]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[27]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[28]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[29]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[30]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "reg_rs2[31]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 61
+    Warning (15610): No output dependent on input pin "rd_addr[0]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 62
+    Warning (15610): No output dependent on input pin "rd_addr[1]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 62
+    Warning (15610): No output dependent on input pin "rd_addr[2]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 62
+    Warning (15610): No output dependent on input pin "rd_addr[3]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 62
+    Warning (15610): No output dependent on input pin "rd_addr[4]" File: /home/rissun57/Desktop/RTL_2/RTL_0/RTL/fpu/fpu_0.v Line: 62
+Info (21057): Implemented 1284 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 211 input pins
+    Info (21059): Implemented 144 output pins
+    Info (21061): Implemented 929 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 89 warnings
+    Info: Peak virtual memory: 482 megabytes
+    Info: Processing ended: Tue Sep  2 16:16:21 2025
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:34
+
+

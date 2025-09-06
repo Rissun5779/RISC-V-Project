@@ -1,0 +1,85 @@
+$date
+	Sat Aug 30 23:09:05 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module fpu_tb $end
+$var wire 1 ! completed $end
+$var wire 32 " result [31:0] $end
+$var reg 1 # clk $end
+$var reg 1 $ completed_reg $end
+$var reg 1 % enabled $end
+$var reg 32 & freg_rs1 [31:0] $end
+$var reg 32 ' freg_rs2 [31:0] $end
+$var reg 1 ( instr_fadd $end
+$var reg 32 ) result_reg [31:0] $end
+$var reg 1 * rst_n $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0*
+b0 )
+x(
+bx '
+bx &
+0%
+0$
+0#
+b0 "
+0!
+$end
+#5000
+1#
+#10000
+0#
+#15000
+1#
+#20000
+0#
+1*
+#25000
+1#
+#30000
+0#
+b1000000010000000000000000000000 '
+b1000000000000000000000000000000 &
+1(
+1%
+#35000
+1!
+1$
+b10000000010000000000000000000000 "
+b10000000010000000000000000000000 )
+1#
+#40000
+0#
+#45000
+1#
+#50000
+0#
+#55000
+1#
+#60000
+0#
+#65000
+1#
+#70000
+0#
+#75000
+1#
+#80000
+0#
+#85000
+1#
+#90000
+0#
+#95000
+1#

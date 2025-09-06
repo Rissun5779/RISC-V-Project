@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+/home/rissun57/Desktop/RTL/FPU/rtl {/home/rissun57/Desktop/RTL/FPU/rtl/fpu_0.v}
+vlog -vlog01compat -work work +incdir+/home/rissun57/Desktop/RTL/FPU/rtl {/home/rissun57/Desktop/RTL/FPU/rtl/fadd_s.v}
+

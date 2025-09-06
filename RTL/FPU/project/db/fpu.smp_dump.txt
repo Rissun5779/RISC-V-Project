@@ -1,0 +1,16 @@
+
+State Machine - |fpu_0|state
+Name state.S_FADD_COMPLETE state.S_FADD_WAIT state.S_FADD_START state.S_FSW_COMPLETE state.S_FSW_WAIT_READY state.S_FSW_MEM_ACCESS state.S_FLW_COMPLETE state.S_FLW_SAMPLE state.S_FLW_STABILIZE state.S_FLW_WAIT_DATA state.S_FLW_WAIT_READY state.S_FLW_MEM_ACCESS state.S_NONE 
+state.S_NONE 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.S_FLW_MEM_ACCESS 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.S_FLW_WAIT_READY 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.S_FLW_WAIT_DATA 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.S_FLW_STABILIZE 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.S_FLW_SAMPLE 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.S_FLW_COMPLETE 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.S_FSW_MEM_ACCESS 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.S_FSW_WAIT_READY 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.S_FSW_COMPLETE 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.S_FADD_START 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.S_FADD_WAIT 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.S_FADD_COMPLETE 1 0 0 0 0 0 0 0 0 0 0 0 1 

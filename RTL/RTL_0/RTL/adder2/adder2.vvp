@@ -1,0 +1,65 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x6532e3d2f8b0 .scope module, "adder2_top_tb" "adder2_top_tb" 2 1;
+ .timescale 0 0;
+v0x6532e3d44a50_0 .var "A", 2 0;
+v0x6532e3d44b60_0 .var "B", 2 0;
+v0x6532e3d44c70_0 .net "res", 3 0, L_0x6532e3d44fb0;  1 drivers
+S_0x6532e3d2fa40 .scope module, "uut" "adder2_top" 2 7, 3 1 0, S_0x6532e3d2f8b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "A";
+    .port_info 1 /INPUT 3 "B";
+    .port_info 2 /OUTPUT 4 "res";
+v0x6532e3d44780_0 .net "A", 2 0, v0x6532e3d44a50_0;  1 drivers
+v0x6532e3d44840_0 .net "B", 2 0, v0x6532e3d44b60_0;  1 drivers
+v0x6532e3d44910_0 .net "res", 3 0, L_0x6532e3d44fb0;  alias, 1 drivers
+S_0x6532e3d31040 .scope module, "uut" "adder2" 3 13, 4 1 0, S_0x6532e3d2fa40;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "A";
+    .port_info 1 /INPUT 3 "B";
+    .port_info 2 /OUTPUT 4 "res";
+v0x6532e3d31270_0 .net "A", 2 0, v0x6532e3d44a50_0;  alias, 1 drivers
+v0x6532e3d44190_0 .net "B", 2 0, v0x6532e3d44b60_0;  alias, 1 drivers
+v0x6532e3d44270_0 .net *"_ivl_0", 3 0, L_0x6532e3d44d60;  1 drivers
+L_0x76f261e9d018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x6532e3d44330_0 .net *"_ivl_3", 0 0, L_0x76f261e9d018;  1 drivers
+v0x6532e3d44410_0 .net *"_ivl_4", 3 0, L_0x6532e3d44e70;  1 drivers
+L_0x76f261e9d060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x6532e3d44540_0 .net *"_ivl_7", 0 0, L_0x76f261e9d060;  1 drivers
+v0x6532e3d44620_0 .net "res", 3 0, L_0x6532e3d44fb0;  alias, 1 drivers
+L_0x6532e3d44d60 .concat [ 3 1 0 0], v0x6532e3d44a50_0, L_0x76f261e9d018;
+L_0x6532e3d44e70 .concat [ 3 1 0 0], v0x6532e3d44b60_0, L_0x76f261e9d060;
+L_0x6532e3d44fb0 .arith/sum 4, L_0x6532e3d44d60, L_0x6532e3d44e70;
+    .scope S_0x6532e3d2f8b0;
+T_0 ;
+    %vpi_call 2 14 "$dumpfile", "tb.vcd" {0 0 0};
+    %vpi_call 2 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x6532e3d2f8b0 {0 0 0};
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x6532e3d44a50_0, 0, 3;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x6532e3d44b60_0, 0, 3;
+    %vpi_call 2 20 "$display", "%d + %d is %d", v0x6532e3d44a50_0, v0x6532e3d44b60_0, v0x6532e3d44c70_0 {0 0 0};
+    %delay 10, 0;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0x6532e3d44a50_0, 0, 3;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x6532e3d44b60_0, 0, 3;
+    %vpi_call 2 27 "$display", "%d + %d is %d", v0x6532e3d44a50_0, v0x6532e3d44b60_0, v0x6532e3d44c70_0 {0 0 0};
+    %delay 100, 0;
+    %vpi_call 2 29 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "adder2_top_tb.v";
+    "adder2_top.v";
+    "adder2.v";

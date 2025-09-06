@@ -1,0 +1,43 @@
+$date
+	Thu Sep  4 19:52:36 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module adder_tb $end
+$var wire 4 ! res [3:0] $end
+$var reg 3 " a [2:0] $end
+$var reg 3 # b [2:0] $end
+$scope module uut $end
+$var wire 3 $ a [2:0] $end
+$var wire 3 % b [2:0] $end
+$var wire 4 & res [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b10 !
+b10 &
+b10 "
+b10 $
+#20
+b11 !
+b11 &
+b1 #
+b1 %
+#120
