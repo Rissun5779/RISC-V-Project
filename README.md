@@ -4,12 +4,8 @@
 ---
 
 ## 專案結構
-RISC-V-Project/
-├── RTL/ # Verilog/VHDL 原始碼（處理器、FPU、控制單元等）
-├── T_core/ # 測試用核心、模擬模組或工具
-├── Docs/ # 參考資料、設計說明書、PDF 教材等（使用 Git LFS 管理）
-├── LICENSE # 授權條款（MIT）
-└── Makefile # Git 操作與開發自動化腳本
+<img width="604" height="178" alt="image" src="https://github.com/user-attachments/assets/433cf7b6-8624-432e-ba6d-d9bd1c14e4fb" />
+
 
 ## 團隊協作說明
 
