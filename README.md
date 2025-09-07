@@ -1,5 +1,5 @@
 # RISC-V-Project
-這是一個以 RISC-V 為核心，搭配 FPGA 與嵌入式系統設計的學術/學習型專案。我們目標是實作並驗證一個完整的 RISC-V 處理器系統，支援 RTL 設計、FPU、SoC 整合與嵌入式測試。
+這是一個以 RISC-V 為核心，搭配 FPGA 與嵌入式系統設計的學術/學習型專案
 
 ---
 
@@ -7,9 +7,7 @@
 <img width="604" height="178" alt="image" src="https://github.com/user-attachments/assets/433cf7b6-8624-432e-ba6d-d9bd1c14e4fb" />
 
 
-## 團隊協作說明
-
-我們使用 Git 進行版本控制，並結合 Git LFS 管理大型檔案。
+## 協作說明
 
 ### 加入團隊的步驟（僅需一次）：
 
