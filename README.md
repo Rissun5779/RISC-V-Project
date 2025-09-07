@@ -29,3 +29,4 @@ cd RISC-V-Project
 
 # 5. 同步 LFS 檔案
 git lfs pull
+
