@@ -1,5 +1,5 @@
 # RISC-V-Project
-這是一個以 RISC-V 為核心，搭配 FPGA 與嵌入式系統設計的學術/學習型專案
+這是一個以 RISC-V 為核心，搭配 FPGA 專案
 
 ---
 
