@@ -6,7 +6,7 @@ VERILOG_SOURCES = $(VERILOG_DIR)/fadd_s.v $(VERILOG_DIR)/fpu.v $(VERILOG_DIR)/fp
 all: $(SIM_EXE)
 
 $(SIM_EXE): $(VERILOG_SOURCES) | $(BUILD_DIR)
-	iverilog -o $(SIM_EXE) $(VERILOG_SOURCES)
+	iverilog -g2012 -o $(SIM_EXE) $(VERILOG_SOURCES)
 	vvp $(SIM_EXE)
 
 clean:

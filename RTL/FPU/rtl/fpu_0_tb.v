@@ -184,7 +184,6 @@ module fpu_comprehensive_tb;
             enabled = 0;
             
             while (!completed) @(posedge clk);
-            
             if (freg_wb_enable && freg_wb_addr == target_reg && freg_wb_data === expected_result) begin
                 $display("✓ PASS: freg[%d] = 0x%h", freg_wb_addr, freg_wb_data);
                 pass_count = pass_count + 1;
