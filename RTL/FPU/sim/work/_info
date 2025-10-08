@@ -1,8 +1,10 @@
 m255
 K4
 z2
-!s12c _opt
+!s12c _opt2
 Z0 !s99 nomlopt
+!s12c _opt
+R0
 !s11f vlog 2024.3 2024.09, Sep 10 2024
 13
 !s112 1.1
@@ -14,84 +16,121 @@ Z1 d/home/rissun57
 T_opt
 !s110 1756997965
 VJh`IfH65B463>F]Ujbz2f2
-04 20 4 work fpu_comprehensive_tb fast 0
+Z2 04 20 4 work fpu_comprehensive_tb fast 0
 =1-000ae431a4f1-68b9a94a-9cd70-a5ae
 R0
-!s12f OEM100
-!s12b OEM100
-!s124 OEM10U3 
-!s135 nogc
-o-quiet -auto_acc_if_foreign -work work +acc
-Z2 tCvgOpt 0
+Z3 !s12f OEM100
+Z4 !s12b OEM100
+Z5 !s124 OEM10U3 
+Z6 !s135 nogc
+Z7 o-quiet -auto_acc_if_foreign -work work +acc
+Z8 tCvgOpt 0
 n@_opt
-OL;O;2024.3;79
+Z9 OL;O;2024.3;79
 R1
+T_opt2
+!s110 1759074019
+VX1L:czKC8Gz0`gW7iG9S52
+R2
+=1-000ae431a4f1-68d956e3-b5f1-10ab95
+R0
+R3
+R4
+R5
+R6
+R7
+R8
+n@_opt2
+R9
 vfadd_s
-Z3 2.././rtl/fadd_s.v|.././rtl/fpu_0.v|.././rtl/fpu_0_tb.v
-Z4 !s110 1756998548
+2/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fadd_s.v
+Z10 !s110 1759074002
 !i10b 1
 !s100 TKUPXI`_K9<hf^OD;c7Ac2
-IT<R_WklDYm0`eR3`MhV2@1
-Z5 d/home/rissun57/Desktop/RTL/FPU/sim
-w1756640104
-8.././rtl/fadd_s.v
-F.././rtl/fadd_s.v
-!i122 3
+I]_IUcVW9b20fLTW=I9H>]0
+Z11 d/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim
+w1757332827
+8/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fadd_s.v
+F/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fadd_s.v
+!i122 4
 L0 1 263
-Z6 VDg1SIo80bB@j0V0VzS_@n1
-Z7 OL;L;2024.3;79
+Z12 VDg1SIo80bB@j0V0VzS_@n1
+Z13 OL;L;2024.3;79
 r1
 !s85 0
 31
-Z8 !s108 1756998548.000000
-!s107 .././rtl/fpu_0_tb.v|.././rtl/fpu_0.v|.././rtl/fadd_s.v|
-Z9 !s90 .././rtl/fadd_s.v|.././rtl/fpu_0.v|.././rtl/fpu_0_tb.v|
+Z14 !s108 1759074002.000000
+!s107 /home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fadd_s.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fadd_s.v|
 !i113 0
-Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
+Z15 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
+vfpu
+2/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0.v
+R10
+!i10b 1
+!s100 4Me]4OJdlm9DeI0o3gDD72
+I]j5Jg=e;BkMS0;O9TfkLZ2
+R11
+w1759073127
+8/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0.v
+F/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0.v
+!i122 5
+L0 3 289
+R12
+R13
+r1
+!s85 0
+31
+R14
+!s107 /home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0.v|
+!i113 0
+R15
+R8
 vfpu_0
-R3
-R4
+2.././rtl/fadd_s.v|.././rtl/fpu_0.v|.././rtl/fpu_0_tb.v
+!s110 1756998548
 !i10b 1
 !s100 X=2eQ`Bkb_lFgB1AJV?EL2
 I1N76FUK@HOY^[doa3K;B_3
-R5
+d/home/rissun57/Desktop/RTL/FPU/sim
 w1756643784
 8.././rtl/fpu_0.v
 F.././rtl/fpu_0.v
 !i122 3
 L0 3 246
-R6
-R7
+R12
+R13
 r1
 !s85 0
 31
-R8
-Z11 !s107 .././rtl/fpu_0_tb.v|.././rtl/fpu_0.v|.././rtl/fadd_s.v|
-R9
+!s108 1756998548.000000
+!s107 .././rtl/fpu_0_tb.v|.././rtl/fpu_0.v|.././rtl/fadd_s.v|
+!s90 .././rtl/fadd_s.v|.././rtl/fpu_0.v|.././rtl/fpu_0_tb.v|
 !i113 0
-R10
-R2
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
 vfpu_comprehensive_tb
-R3
-R4
+2/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0_tb.v
+R10
 !i10b 1
-!s100 bKkEQUFMR0eGld5lMS@kJ1
-IkXa[GmZ^dlI?Ye0EgbnA?0
-R5
-w1756989521
-8.././rtl/fpu_0_tb.v
-F.././rtl/fpu_0_tb.v
-!i122 3
-L0 3 490
-R6
-R7
+!s100 [2oi30J:z^`SGcm0J<LZK2
+IN2n3MGIGYF2>>aa=BgQ7D2
+R11
+w1759073166
+8/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0_tb.v
+F/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0_tb.v
+!i122 6
+L0 3 718
+R12
+R13
 r1
 !s85 0
 31
-R8
-R11
-R9
+R14
+!s107 /home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0_tb.v|
 !i113 0
-R10
-R2
+R15
+R8

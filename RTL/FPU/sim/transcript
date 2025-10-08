@@ -1,9 +1,1269 @@
-# vsim -c work.fpu_0_tb -do "run -all; quit" 
-# Start time: 23:09:09 on Sep 04,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: (vopt-11) Could not find work.fpu_0_tb.
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# vsim . 
+# Start time: 23:38:26 on Sep 28,2025
+# ** Error (suppressible): (vsim-19) Failed to access library '' at "".
+# No such file or directory. (errno = ENOENT)
 # Error loading design
-# End time: 23:09:09 on Sep 04,2025, Elapsed time: 0:00:00
+# End time: 23:38:26 on Sep 28,2025, Elapsed time: 0:00:00
 # Errors: 1, Warnings: 0
+# Loading project sim2
+# Compile of fadd_s.v was successful.
+# Compile of fpu_0.v was successful.
+# Compile of fpu_0_tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.fpu_comprehensive_tb
+# vsim -voptargs="+acc" work.fpu_comprehensive_tb 
+# Start time: 23:40:18 on Sep 28,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpu(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.fpu_comprehensive_tb(fast)
+# Loading work.fpu(fast)
+# Loading work.fadd_s(fast)
+add wave -position insertpoint  \
+sim:/fpu_comprehensive_tb/clk \
+sim:/fpu_comprehensive_tb/rst_n \
+sim:/fpu_comprehensive_tb/enabled \
+sim:/fpu_comprehensive_tb/instr_flw \
+sim:/fpu_comprehensive_tb/instr_fsw \
+sim:/fpu_comprehensive_tb/instr_fadd \
+sim:/fpu_comprehensive_tb/instr_fdiv \
+sim:/fpu_comprehensive_tb/instr_fmul \
+sim:/fpu_comprehensive_tb/reg_rs1 \
+sim:/fpu_comprehensive_tb/reg_rs2 \
+sim:/fpu_comprehensive_tb/rd_addr \
+sim:/fpu_comprehensive_tb/freg_rs1 \
+sim:/fpu_comprehensive_tb/freg_rs2 \
+sim:/fpu_comprehensive_tb/frd_addr \
+sim:/fpu_comprehensive_tb/imm \
+sim:/fpu_comprehensive_tb/mem_addr \
+sim:/fpu_comprehensive_tb/mem_wdata \
+sim:/fpu_comprehensive_tb/mem_rdata \
+sim:/fpu_comprehensive_tb/mem_we \
+sim:/fpu_comprehensive_tb/mem_re \
+sim:/fpu_comprehensive_tb/mem_ready \
+sim:/fpu_comprehensive_tb/freg_wb_enable \
+sim:/fpu_comprehensive_tb/freg_wb_addr \
+sim:/fpu_comprehensive_tb/freg_wb_data \
+sim:/fpu_comprehensive_tb/reg_wb_enable \
+sim:/fpu_comprehensive_tb/reg_wb_addr \
+sim:/fpu_comprehensive_tb/reg_wb_data \
+sim:/fpu_comprehensive_tb/completed \
+sim:/fpu_comprehensive_tb/fpu_busy \
+sim:/fpu_comprehensive_tb/memory \
+sim:/fpu_comprehensive_tb/pass_count \
+sim:/fpu_comprehensive_tb/fail_count \
+sim:/fpu_comprehensive_tb/operation_count
+run -all
+# ** Error: (vsim-7) Failed to open VCD file "build/fpu_comprehensive_tb.vcd" in write mode.
+# No such file or directory. (errno = ENOENT)    : /home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0_tb.v(215)
+#    Time: 0 ps  Iteration: 0  Instance: /fpu_comprehensive_tb
+# === FPU Comprehensive Testbench Started ===
+# 
+# ========== FLW INSTRUCTION TESTS ==========
+# 
+# === Testing FLW:         Load 1.0 ===
+# Time:                   35 | State -> FLW_ACCESS
+# Time:                   45 | State -> FLW_WAIT_READY
+# Time:                   65 | State -> FLW_WAIT_DATA
+# Time:                   75 | State -> FLW_STABILIZE
+# Time:                   85 | State -> FLW_SAMPLE
+# Time:                   95 | State -> FLW_COMPLETE
+# Time:                  105 | State -> IDLE
+# Time:                  115 | ✓ Operation completed
+# Time:                  115 | Write-back: freg[ 1] = 0x3f800000
+# ✓ PASS: freg[ 1] = 0x3f800000
+# 
+# === Testing FLW:         Load 2.0 ===
+# Time:                  185 | State -> FLW_ACCESS
+# Time:                  195 | State -> FLW_WAIT_READY
+# Time:                  215 | State -> FLW_WAIT_DATA
+# Time:                  225 | State -> FLW_STABILIZE
+# Time:                  235 | State -> FLW_SAMPLE
+# Time:                  245 | State -> FLW_COMPLETE
+# Time:                  255 | State -> IDLE
+# Time:                  265 | ✓ Operation completed
+# Time:                  265 | Write-back: freg[ 2] = 0x40000000
+# ✓ PASS: freg[ 2] = 0x40000000
+# 
+# === Testing FLW:         Load 3.0 ===
+# Time:                  335 | State -> FLW_ACCESS
+# Time:                  345 | State -> FLW_WAIT_READY
+# Time:                  365 | State -> FLW_WAIT_DATA
+# Time:                  375 | State -> FLW_STABILIZE
+# Time:                  385 | State -> FLW_SAMPLE
+# Time:                  395 | State -> FLW_COMPLETE
+# Time:                  405 | State -> IDLE
+# Time:                  415 | ✓ Operation completed
+# Time:                  415 | Write-back: freg[ 3] = 0x40400000
+# ✓ PASS: freg[ 3] = 0x40400000
+# 
+# === Testing FLW:         Load 0.5 ===
+# Time:                  485 | State -> FLW_ACCESS
+# Time:                  495 | State -> FLW_WAIT_READY
+# Time:                  515 | State -> FLW_WAIT_DATA
+# Time:                  525 | State -> FLW_STABILIZE
+# Time:                  535 | State -> FLW_SAMPLE
+# Time:                  545 | State -> FLW_COMPLETE
+# Time:                  555 | State -> IDLE
+# Time:                  565 | ✓ Operation completed
+# Time:                  565 | Write-back: freg[ 4] = 0x3f000000
+# ✓ PASS: freg[ 4] = 0x3f000000
+# 
+# === Testing FLW:         Load 0.1 ===
+# Time:                  635 | State -> FLW_ACCESS
+# Time:                  645 | State -> FLW_WAIT_READY
+# Time:                  665 | State -> FLW_WAIT_DATA
+# Time:                  675 | State -> FLW_STABILIZE
+# Time:                  685 | State -> FLW_SAMPLE
+# Time:                  695 | State -> FLW_COMPLETE
+# Time:                  705 | State -> IDLE
+# Time:                  715 | ✓ Operation completed
+# Time:                  715 | Write-back: freg[ 5] = 0x3dcccccd
+# ✓ PASS: freg[ 5] = 0x3dcccccd
+# 
+# === Testing FLW:        Load 0.01 ===
+# Time:                  785 | State -> FLW_ACCESS
+# Time:                  795 | State -> FLW_WAIT_READY
+# Time:                  815 | State -> FLW_WAIT_DATA
+# Time:                  825 | State -> FLW_STABILIZE
+# Time:                  835 | State -> FLW_SAMPLE
+# Time:                  845 | State -> FLW_COMPLETE
+# Time:                  855 | State -> IDLE
+# Time:                  865 | ✓ Operation completed
+# Time:                  865 | Write-back: freg[ 6] = 0x3c23d70a
+# ✓ PASS: freg[ 6] = 0x3c23d70a
+# 
+# ========== FSW INSTRUCTION TESTS ==========
+# 
+# === Testing FSW:        Store 1.0 ===
+# Time:                  935 | State -> FSW_ACCESS
+# Time:                  945 | State -> FSW_WAIT_READY
+# Time:                  965 | State -> FSW_COMPLETE
+# Time:                  975 | State -> IDLE
+# Time:                  985 | ✓ Operation completed
+# ✓ PASS: Memory[0x00002000] = 0x3f800000
+# 
+# === Testing FSW:        Store 2.0 ===
+# Time:                 1065 | State -> FSW_ACCESS
+# Time:                 1075 | State -> FSW_WAIT_READY
+# Time:                 1095 | State -> FSW_COMPLETE
+# Time:                 1105 | State -> IDLE
+# Time:                 1115 | ✓ Operation completed
+# ✓ PASS: Memory[0x00002004] = 0x40000000
+# 
+# === Testing FSW:        Store 0.1 ===
+# Time:                 1195 | State -> FSW_ACCESS
+# Time:                 1205 | State -> FSW_WAIT_READY
+# Time:                 1225 | State -> FSW_COMPLETE
+# Time:                 1235 | State -> IDLE
+# Time:                 1245 | ✓ Operation completed
+# ✓ PASS: Memory[0x00002008] = 0x3dcccccd
+# 
+# ========== FADD INSTRUCTION TESTS - 精密小數計算 ==========
+# 
+# --- 基本精密小數加法 ---
+# 
+# === Testing FADD: .1 + 0.2 ≈ 0.3 ===
+# FADD: 0x3dcccccd + 0x3e4ccccd -> freg[16]
+# Time:                 1325 | State -> FADD_START
+# Time:                 1335 | State -> FADD_WAIT
+# Time:                 1375 | State -> FADD_COMPLETE
+# Time:                 1385 | State -> IDLE
+# Progress: Completed          10 operations
+# Time:                 1395 | ✓ Operation completed
+# Time:                 1395 | Write-back: freg[16] = 0x3e99999a
+# Time:                 1395 | Precision Test Result: freg[16] = 0x3e99999a
+# ✓ PASS: freg[16] = 0x3e99999a
+# 
+# === Testing FADD: .5 + 0.25 = 0.75 ===
+# FADD: 0x3f000000 + 0x3e800000 -> freg[17]
+# Time:                 1465 | State -> FADD_START
+# Time:                 1475 | State -> FADD_WAIT
+# Time:                 1515 | State -> FADD_COMPLETE
+# Time:                 1525 | State -> IDLE
+# Time:                 1535 | ✓ Operation completed
+# Time:                 1535 | Write-back: freg[17] = 0x3f400000
+# Time:                 1535 | Precision Test Result: freg[17] = 0x3f400000
+# ✓ PASS: freg[17] = 0x3f400000
+# 
+# === Testing FADD: .75 + 0.25 = 1.0 ===
+# FADD: 0x3f400000 + 0x3e800000 -> freg[18]
+# Time:                 1605 | State -> FADD_START
+# Time:                 1615 | State -> FADD_WAIT
+# Time:                 1655 | State -> FADD_COMPLETE
+# Time:                 1665 | State -> IDLE
+# Time:                 1675 | ✓ Operation completed
+# Time:                 1675 | Write-back: freg[18] = 0x3f800000
+# Time:                 1675 | Precision Test Result: freg[18] = 0x3f800000
+# ✓ PASS: freg[18] = 0x3f800000
+# 
+# --- 高精度小數加法 ---
+# 
+# === Testing FADD: 01 + 0.01 = 0.02 ===
+# FADD: 0x3c23d70a + 0x3c23d70a -> freg[19]
+# Time:                 1745 | State -> FADD_START
+# Time:                 1755 | State -> FADD_WAIT
+# Time:                 1795 | State -> FADD_COMPLETE
+# Time:                 1805 | State -> IDLE
+# Time:                 1815 | ✓ Operation completed
+# Time:                 1815 | Write-back: freg[19] = 0x3ca3d70a
+# Time:                 1815 | Precision Test Result: freg[19] = 0x3ca3d70a
+# ✓ PASS: freg[19] = 0x3ca3d70a
+# 
+# === Testing FADD: 5 + 0.005 = 0.01 ===
+# FADD: 0x3ba3d70a + 0x3ba3d70a -> freg[20]
+# Time:                 1885 | State -> FADD_START
+# Time:                 1895 | State -> FADD_WAIT
+# Time:                 1935 | State -> FADD_COMPLETE
+# Time:                 1945 | State -> IDLE
+# Time:                 1955 | ✓ Operation completed
+# Time:                 1955 | Write-back: freg[20] = 0x3c23d70a
+# Time:                 1955 | Precision Test Result: freg[20] = 0x3c23d70a
+# ✓ PASS: freg[20] = 0x3c23d70a
+# 
+# === Testing FADD:  + 0.001 = 0.002 ===
+# FADD: 0x3a83126f + 0x3a83126f -> freg[21]
+# Time:                 2025 | State -> FADD_START
+# Time:                 2035 | State -> FADD_WAIT
+# Time:                 2075 | State -> FADD_COMPLETE
+# Time:                 2085 | State -> IDLE
+# Time:                 2095 | ✓ Operation completed
+# Time:                 2095 | Write-back: freg[21] = 0x3b03126f
+# Time:                 2095 | Precision Test Result: freg[21] = 0x3b03126f
+# ✓ PASS: freg[21] = 0x3b03126f
+# 
+# --- 不同量級小數加法 ---
+# 
+# === Testing FADD:  + 0.01 ≈ 1.01 ===
+# FADD: 0x3f800000 + 0x3c23d70a -> freg[22]
+# Time:                 2165 | State -> FADD_START
+# Time:                 2175 | State -> FADD_WAIT
+# Time:                 2215 | State -> FADD_COMPLETE
+# Time:                 2225 | State -> IDLE
+# Time:                 2235 | ✓ Operation completed
+# Time:                 2235 | Write-back: freg[22] = 0x3f8147ae
+# Time:                 2235 | Precision Test Result: freg[22] = 0x3f8147ae
+# ✓ PASS: freg[22] = 0x3f8147ae
+# 
+# === Testing FADD:  0.005 ≈ 0.505 ===
+# FADD: 0x3f000000 + 0x3ba3d70a -> freg[23]
+# Time:                 2305 | State -> FADD_START
+# Time:                 2315 | State -> FADD_WAIT
+# Time:                 2355 | State -> FADD_COMPLETE
+# Time:                 2365 | State -> IDLE
+# Time:                 2375 | ✓ Operation completed
+# Time:                 2375 | Write-back: freg[23] = 0x3f0147ae
+# Time:                 2375 | Precision Test Result: freg[23] = 0x3f0147ae
+# ✗ FAIL: Expected freg[23] = 0x3f00a3d7, Got freg[23] = 0x3f0147ae
+# 
+# === Testing FADD:  0.001 ≈ 0.101 ===
+# FADD: 0x3dcccccd + 0x3a83126f -> freg[24]
+# Time:                 2445 | State -> FADD_START
+# Time:                 2455 | State -> FADD_WAIT
+# Time:                 2495 | State -> FADD_COMPLETE
+# Time:                 2505 | State -> IDLE
+# Time:                 2515 | ✓ Operation completed
+# Time:                 2515 | Write-back: freg[24] = 0x3dced917
+# Time:                 2515 | Precision Test Result: freg[24] = 0x3dced917
+# ✗ FAIL: Expected freg[24] = 0x3dd0c49c, Got freg[24] = 0x3dced917
+# 
+# --- 數學常數加法 ---
+# 
+# === Testing FADD: + e ≈ 5.859874 ===
+# FADD: 0x40490fdb + 0x402df854 -> freg[25]
+# Time:                 2585 | State -> FADD_START
+# Time:                 2595 | State -> FADD_WAIT
+# Time:                 2635 | State -> FADD_COMPLETE
+# Time:                 2645 | State -> IDLE
+# Time:                 2655 | ✓ Operation completed
+# Time:                 2655 | Write-back: freg[25] = 0x40bb8418
+# Time:                 2655 | Precision Test Result: freg[25] = 0x40bb8418
+# ✗ FAIL: Expected freg[25] = 0x40b5c28f, Got freg[25] = 0x40bb8418
+# 
+# === Testing FADD: ��3 ≈ 3.146264 ===
+# FADD: 0x3fb504f3 + 0x3fddb3d7 -> freg[26]
+# Time:                 2725 | State -> FADD_START
+# Time:                 2735 | State -> FADD_WAIT
+# Time:                 2775 | State -> FADD_COMPLETE
+# Time:                 2785 | State -> IDLE
+# Progress: Completed          20 operations
+# Time:                 2795 | ✓ Operation completed
+# Time:                 2795 | Write-back: freg[26] = 0x40495c65
+# Time:                 2795 | Precision Test Result: freg[26] = 0x40495c65
+# ✗ FAIL: Expected freg[26] = 0x406170ca, Got freg[26] = 0x40495c65
+# 
+# === Testing FADD: 1/e ≈ 0.686189 ===
+# FADD: 0x3f106ebe + 0x3f22f983 -> freg[27]
+# Time:                 2865 | State -> FADD_START
+# Time:                 2875 | State -> FADD_WAIT
+# Time:                 2915 | State -> FADD_COMPLETE
+# Time:                 2925 | State -> IDLE
+# Time:                 2935 | ✓ Operation completed
+# Time:                 2935 | Write-back: freg[27] = 0x3f99b420
+# Time:                 2935 | Precision Test Result: freg[27] = 0x3f99b420
+# ✗ FAIL: Expected freg[27] = 0x3f654641, Got freg[27] = 0x3f99b420
+# 
+# --- 機器精度邊界測試 ---
+# 
+# === Testing FADD: 0 (精度測試) ===
+# FADD: 0x3f800000 + 0x33800000 -> freg[28]
+# Time:                 3005 | State -> FADD_START
+# Time:                 3015 | State -> FADD_WAIT
+# Time:                 3055 | State -> FADD_COMPLETE
+# Time:                 3065 | State -> IDLE
+# Time:                 3075 | ✓ Operation completed
+# Time:                 3075 | Write-back: freg[28] = 0x3f800000
+# Time:                 3075 | Precision Test Result: freg[28] = 0x3f800000
+# ✓ PASS: freg[28] = 0x3f800000
+# 
+# === Testing FADD: -22) = 1.0000001 ===
+# FADD: 0x3f800000 + 0x34000000 -> freg[29]
+# Time:                 3145 | State -> FADD_START
+# Time:                 3155 | State -> FADD_WAIT
+# Time:                 3195 | State -> FADD_COMPLETE
+# Time:                 3205 | State -> IDLE
+# Time:                 3215 | ✓ Operation completed
+# Time:                 3215 | Write-back: freg[29] = 0x3f800001
+# Time:                 3215 | Precision Test Result: freg[29] = 0x3f800001
+# ✓ PASS: freg[29] = 0x3f800001
+# 
+# --- 負數精密加法 ---
+# 
+# === Testing FADD: .1 + 0.2 ≈ 0.1 ===
+# FADD: 0xbdcccccd + 0x3e4ccccd -> freg[30]
+# Time:                 3285 | State -> FADD_START
+# Time:                 3295 | State -> FADD_WAIT
+# Time:                 3335 | State -> FADD_COMPLETE
+# Time:                 3345 | State -> IDLE
+# Time:                 3355 | ✓ Operation completed
+# Time:                 3355 | Write-back: freg[30] = 0x3dcccccd
+# Time:                 3355 | Precision Test Result: freg[30] = 0x3dcccccd
+# ✓ PASS: freg[30] = 0x3dcccccd
+# 
+# === Testing FADD: .01 + 0.01 = 0.0 ===
+# FADD: 0xbc23d70a + 0x3c23d70a -> freg[31]
+# Time:                 3425 | State -> FADD_START
+# Time:                 3435 | State -> FADD_WAIT
+# Time:                 3475 | State -> FADD_COMPLETE
+# Time:                 3485 | State -> IDLE
+# Time:                 3495 | ✓ Operation completed
+# Time:                 3495 | Write-back: freg[31] = 0xae800000
+# Time:                 3495 | Precision Test Result: freg[31] = 0xae800000
+# ✗ FAIL: Expected freg[31] = 0x00000000, Got freg[31] = 0xae800000
+# 
+# === Testing FADD: .5 + 0.75 = 0.25 ===
+# FADD: 0xbf000000 + 0x3f400000 -> freg[ 0]
+# Time:                 3565 | State -> FADD_START
+# Time:                 3575 | State -> FADD_WAIT
+# Time:                 3615 | State -> FADD_COMPLETE
+# Time:                 3625 | State -> IDLE
+# Time:                 3635 | ✓ Operation completed
+# Time:                 3635 | Write-back: freg[ 0] = 0x3e800000
+# ✓ PASS: freg[ 0] = 0x3e800000
+# 
+# --- 累積精密計算 ---
+# 
+# === Testing FADD: 1 = 0.2 (step 1) ===
+# FADD: 0x3dcccccd + 0x3dcccccd -> freg[ 1]
+# Time:                 3705 | State -> FADD_START
+# Time:                 3715 | State -> FADD_WAIT
+# Time:                 3755 | State -> FADD_COMPLETE
+# Time:                 3765 | State -> IDLE
+# Time:                 3775 | ✓ Operation completed
+# Time:                 3775 | Write-back: freg[ 1] = 0x3e4ccccd
+# ✓ PASS: freg[ 1] = 0x3e4ccccd
+# 
+# === Testing FADD: 1 = 0.3 (step 2) ===
+# FADD: 0x3e4ccccd + 0x3dcccccd -> freg[ 2]
+# Time:                 3825 | State -> FADD_START
+# Time:                 3835 | State -> FADD_WAIT
+# Time:                 3875 | State -> FADD_COMPLETE
+# Time:                 3885 | State -> IDLE
+# Time:                 3895 | ✓ Operation completed
+# Time:                 3895 | Write-back: freg[ 2] = 0x3e99999a
+# ✓ PASS: freg[ 2] = 0x3e99999a
+# 
+# === Testing FADD: 1 = 0.4 (step 3) ===
+# FADD: 0x3e99999a + 0x3dcccccd -> freg[ 3]
+# Time:                 3945 | State -> FADD_START
+# Time:                 3955 | State -> FADD_WAIT
+# Time:                 3995 | State -> FADD_COMPLETE
+# Time:                 4005 | State -> IDLE
+# Time:                 4015 | ✓ Operation completed
+# Time:                 4015 | Write-back: freg[ 3] = 0x3ecccccd
+# ✓ PASS: freg[ 3] = 0x3ecccccd
+# 
+# === Testing FADD: 1 = 0.5 (step 4) ===
+# FADD: 0x3ecccccd + 0x3dcccccd -> freg[ 4]
+# Time:                 4065 | State -> FADD_START
+# Time:                 4075 | State -> FADD_WAIT
+# Time:                 4115 | State -> FADD_COMPLETE
+# Time:                 4125 | State -> IDLE
+# Progress: Completed          30 operations
+# Time:                 4135 | ✓ Operation completed
+# Time:                 4135 | Write-back: freg[ 4] = 0x3f000000
+# ✓ PASS: freg[ 4] = 0x3f000000
+# 
+# --- 科學計算相關 ---
+# 
+# === Testing FADD: π/2 + π/2 = π ===
+# FADD: 0x3f490fdb + 0x3f490fdb -> freg[ 5]
+# Time:                 4205 | State -> FADD_START
+# Time:                 4215 | State -> FADD_WAIT
+# Time:                 4255 | State -> FADD_COMPLETE
+# Time:                 4265 | State -> IDLE
+# Time:                 4275 | ✓ Operation completed
+# Time:                 4275 | Write-back: freg[ 5] = 0x3fc90fdb
+# ✗ FAIL: Expected freg[ 5] = 0x40490fdb, Got freg[ 5] = 0x3fc90fdb
+# 
+# === Testing FADD:  ln(2) = 2*ln(2) ===
+# FADD: 0x3f060a92 + 0x3f060a92 -> freg[ 6]
+# Time:                 4345 | State -> FADD_START
+# Time:                 4355 | State -> FADD_WAIT
+# Time:                 4395 | State -> FADD_COMPLETE
+# Time:                 4405 | State -> IDLE
+# Time:                 4415 | ✓ Operation completed
+# Time:                 4415 | Write-back: freg[ 6] = 0x3f860a92
+# ✓ PASS: freg[ 6] = 0x3f860a92
+# 
+# --- 對數指數相關 ---
+# 
+# === Testing FADD: (2) = 2*log10(2) ===
+# FADD: 0x3f317218 + 0x3f317218 -> freg[ 7]
+# Time:                 4485 | State -> FADD_START
+# Time:                 4495 | State -> FADD_WAIT
+# Time:                 4535 | State -> FADD_COMPLETE
+# Time:                 4545 | State -> IDLE
+# Time:                 4555 | ✓ Operation completed
+# Time:                 4555 | Write-back: freg[ 7] = 0x3fb17218
+# ✓ PASS: freg[ 7] = 0x3fb17218
+# 
+# --- 三角函數相關 ---
+# 
+# === Testing FADD: (30°) ≈ 1.366 ===
+# FADD: 0x3f000000 + 0x3f5db3d7 -> freg[ 8]
+# Time:                 4625 | State -> FADD_START
+# Time:                 4635 | State -> FADD_WAIT
+# Time:                 4675 | State -> FADD_COMPLETE
+# Time:                 4685 | State -> IDLE
+# Time:                 4695 | ✓ Operation completed
+# Time:                 4695 | Write-back: freg[ 8] = 0x3faed9ec
+# ✗ FAIL: Expected freg[ 8] = 0x3fadb3d7, Got freg[ 8] = 0x3faed9ec
+# 
+# --- 極小值精密加法 ---
+# 
+# === Testing FADD:  0.0001 = 0.0002 ===
+# FADD: 0x39d1b717 + 0x39d1b717 -> freg[ 9]
+# Time:                 4765 | State -> FADD_START
+# Time:                 4775 | State -> FADD_WAIT
+# Time:                 4815 | State -> FADD_COMPLETE
+# Time:                 4825 | State -> IDLE
+# Time:                 4835 | ✓ Operation completed
+# Time:                 4835 | Write-back: freg[ 9] = 0x3a51b717
+# ✓ PASS: freg[ 9] = 0x3a51b717
+# 
+# === Testing FADD: -6 + 1e-6 = 2e-6 ===
+# FADD: 0x35d1b717 + 0x35d1b717 -> freg[10]
+# Time:                 4905 | State -> FADD_START
+# Time:                 4915 | State -> FADD_WAIT
+# Time:                 4955 | State -> FADD_COMPLETE
+# Time:                 4965 | State -> IDLE
+# Time:                 4975 | ✓ Operation completed
+# Time:                 4975 | Write-back: freg[10] = 0x3651b717
+# ✓ PASS: freg[10] = 0x3651b717
+# 
+# --- 精度損失邊界測試 ---
+# 
+# === Testing FADD: 0 (精度損失) ===
+# FADD: 0x47800000 + 0x3f800000 -> freg[11]
+# Time:                 5045 | State -> FADD_START
+# Time:                 5055 | State -> FADD_WAIT
+# Time:                 5095 | State -> FADD_COMPLETE
+# Time:                 5105 | State -> IDLE
+# Time:                 5115 | ✓ Operation completed
+# Time:                 5115 | Write-back: freg[11] = 0x47800080
+# ✗ FAIL: Expected freg[11] = 0x47800000, Got freg[11] = 0x47800080
+# 
+# === Testing FADD: 0 (精度損失) ===
+# FADD: 0x4b800000 + 0x3f800000 -> freg[12]
+# Time:                 5185 | State -> FADD_START
+# Time:                 5195 | State -> FADD_WAIT
+# Time:                 5235 | State -> FADD_COMPLETE
+# Time:                 5245 | State -> IDLE
+# Time:                 5255 | ✓ Operation completed
+# Time:                 5255 | Write-back: freg[12] = 0x4b800000
+# ✓ PASS: freg[12] = 0x4b800000
+# 
+# --- 歸一化邊界測試 ---
+# 
+# === Testing FADD: �小正規化數 ===
+# FADD: 0x00800000 + 0x00800000 -> freg[13]
+# Time:                 5325 | State -> FADD_START
+# Time:                 5335 | State -> FADD_WAIT
+# Time:                 5375 | State -> FADD_COMPLETE
+# Time:                 5385 | State -> IDLE
+# Time:                 5395 | ✓ Operation completed
+# Time:                 5395 | Write-back: freg[13] = 0x01000000
+# ✓ PASS: freg[13] = 0x01000000
+# 
+# === Testing FADD: �小正規化數 ===
+# FADD: 0x007fffff + 0x00000001 -> freg[14]
+# Time:                 5465 | State -> FADD_START
+# Time:                 5475 | State -> FADD_WAIT
+# Time:                 5515 | State -> FADD_COMPLETE
+# Time:                 5525 | State -> IDLE
+# Progress: Completed          40 operations
+# Time:                 5535 | ✓ Operation completed
+# Time:                 5535 | Write-back: freg[14] = 0x00800000
+# ✓ PASS: freg[14] = 0x00800000
+# 
+# ========== 零值測試 ==========
+# 
+# === Testing FADD:  1.0 + 0.0 = 1.0 ===
+# FADD: 0x3f800000 + 0x00000000 -> freg[15]
+# Time:                 5605 | State -> FADD_START
+# Time:                 5615 | State -> FADD_WAIT
+# Time:                 5655 | State -> FADD_COMPLETE
+# Time:                 5665 | State -> IDLE
+# Time:                 5675 | ✓ Operation completed
+# Time:                 5675 | Write-back: freg[15] = 0x3f800000
+# ✓ PASS: freg[15] = 0x3f800000
+# 
+# === Testing FADD:  0.0 + 0.0 = 0.0 ===
+# FADD: 0x00000000 + 0x00000000 -> freg[16]
+# Time:                 5745 | State -> FADD_START
+# Time:                 5755 | State -> FADD_WAIT
+# Time:                 5795 | State -> FADD_COMPLETE
+# Time:                 5805 | State -> IDLE
+# Time:                 5815 | ✓ Operation completed
+# Time:                 5815 | Write-back: freg[16] = 0x00000000
+# Time:                 5815 | Precision Test Result: freg[16] = 0x00000000
+# ✓ PASS: freg[16] = 0x00000000
+# 
+# === Testing FADD:  + (-0.0) = +0.0 ===
+# FADD: 0x00000000 + 0x80000000 -> freg[17]
+# Time:                 5885 | State -> FADD_START
+# Time:                 5895 | State -> FADD_WAIT
+# Time:                 5935 | State -> FADD_COMPLETE
+# Time:                 5945 | State -> IDLE
+# Time:                 5955 | ✓ Operation completed
+# Time:                 5955 | Write-back: freg[17] = 0x00000000
+# Time:                 5955 | Precision Test Result: freg[17] = 0x00000000
+# ✓ PASS: freg[17] = 0x00000000
+# 
+# ========== 無窮大和 NaN 測試 ==========
+# 
+# === Testing FADD: Inf + 1.0 = +Inf ===
+# FADD: 0x7f800000 + 0x3f800000 -> freg[18]
+# Time:                 6025 | State -> FADD_START
+# Time:                 6035 | State -> FADD_WAIT
+# Time:                 6075 | State -> FADD_COMPLETE
+# Time:                 6085 | State -> IDLE
+# Time:                 6095 | ✓ Operation completed
+# Time:                 6095 | Write-back: freg[18] = 0x7f800000
+# Time:                 6095 | Precision Test Result: freg[18] = 0x7f800000
+# Time:                 6095 | Special: +Infinity detected
+# ✓ PASS: freg[18] = 0x7f800000
+# 
+# === Testing FADD: Inf + 1.0 = -Inf ===
+# FADD: 0xff800000 + 0x3f800000 -> freg[19]
+# Time:                 6165 | State -> FADD_START
+# Time:                 6175 | State -> FADD_WAIT
+# Time:                 6215 | State -> FADD_COMPLETE
+# Time:                 6225 | State -> IDLE
+# Time:                 6235 | ✓ Operation completed
+# Time:                 6235 | Write-back: freg[19] = 0xff800000
+# Time:                 6235 | Precision Test Result: freg[19] = 0xff800000
+# Time:                 6235 | Special: -Infinity detected
+# ✓ PASS: freg[19] = 0xff800000
+# 
+# === Testing FADD: nf + +Inf = +Inf ===
+# FADD: 0x7f800000 + 0x7f800000 -> freg[20]
+# Time:                 6305 | State -> FADD_START
+# Time:                 6315 | State -> FADD_WAIT
+# Time:                 6355 | State -> FADD_COMPLETE
+# Time:                 6365 | State -> IDLE
+# Time:                 6375 | ✓ Operation completed
+# Time:                 6375 | Write-back: freg[20] = 0x7f800000
+# Time:                 6375 | Precision Test Result: freg[20] = 0x7f800000
+# Time:                 6375 | Special: +Infinity detected
+# ✓ PASS: freg[20] = 0x7f800000
+# 
+# === Testing FADD: f + (-Inf) = NaN ===
+# FADD: 0x7f800000 + 0xff800000 -> freg[21]
+# Time:                 6445 | State -> FADD_START
+# Time:                 6455 | State -> FADD_WAIT
+# Time:                 6495 | State -> FADD_COMPLETE
+# Time:                 6505 | State -> IDLE
+# Time:                 6515 | ✓ Operation completed
+# Time:                 6515 | Write-back: freg[21] = 0xffc00000
+# Time:                 6515 | Precision Test Result: freg[21] = 0xffc00000
+# Time:                 6515 | Special: NaN detected
+# ✗ FAIL: Expected freg[21] = 0x7fc00000, Got freg[21] = 0xffc00000
+# 
+# === Testing FADD:  NaN + 1.0 = NaN ===
+# FADD: 0x7fc00000 + 0x3f800000 -> freg[22]
+# Time:                 6585 | State -> FADD_START
+# Time:                 6595 | State -> FADD_WAIT
+# Time:                 6635 | State -> FADD_COMPLETE
+# Time:                 6645 | State -> IDLE
+# Time:                 6655 | ✓ Operation completed
+# Time:                 6655 | Write-back: freg[22] = 0x7fc00000
+# Time:                 6655 | Precision Test Result: freg[22] = 0x7fc00000
+# Time:                 6655 | Special: NaN detected
+# ✓ PASS: freg[22] = 0x7fc00000
+# 
+# === Testing FADD:  1.0 + NaN = NaN ===
+# FADD: 0x3f800000 + 0x7fc00000 -> freg[23]
+# Time:                 6725 | State -> FADD_START
+# Time:                 6735 | State -> FADD_WAIT
+# Time:                 6775 | State -> FADD_COMPLETE
+# Time:                 6785 | State -> IDLE
+# Time:                 6795 | ✓ Operation completed
+# Time:                 6795 | Write-back: freg[23] = 0x7fc00000
+# Time:                 6795 | Precision Test Result: freg[23] = 0x7fc00000
+# Time:                 6795 | Special: NaN detected
+# ✓ PASS: freg[23] = 0x7fc00000
+# 
+# ========== 混合操作測試 ==========
+# 
+# --- 序列 1: 精密小數計算鏈 ---
+# 
+# === Testing FLW:   Load 0.1 to f1 ===
+# Time:                 6865 | State -> FLW_ACCESS
+# Time:                 6875 | State -> FLW_WAIT_READY
+# Time:                 6895 | State -> FLW_WAIT_DATA
+# Time:                 6905 | State -> FLW_STABILIZE
+# Time:                 6915 | State -> FLW_SAMPLE
+# Time:                 6925 | State -> FLW_COMPLETE
+# Time:                 6935 | State -> IDLE
+# Progress: Completed          50 operations
+# Time:                 6945 | ✓ Operation completed
+# Time:                 6945 | Write-back: freg[ 1] = 0x3dcccccd
+# ✓ PASS: freg[ 1] = 0x3dcccccd
+# 
+# === Testing FLW:   Load 0.2 to f2 ===
+# Time:                 6995 | State -> FLW_ACCESS
+# Time:                 7005 | State -> FLW_WAIT_READY
+# Time:                 7025 | State -> FLW_WAIT_DATA
+# Time:                 7035 | State -> FLW_STABILIZE
+# Time:                 7045 | State -> FLW_SAMPLE
+# Time:                 7055 | State -> FLW_COMPLETE
+# Time:                 7065 | State -> IDLE
+# Time:                 7075 | ✓ Operation completed
+# Time:                 7075 | Write-back: freg[ 2] = 0x3e4ccccd
+# ✓ PASS: freg[ 2] = 0x3e4ccccd
+# 
+# === Testing FADD:  f1 + f2 ≈ 0.3 ===
+# FADD: 0x3dcccccd + 0x3e4ccccd -> freg[ 3]
+# Time:                 7125 | State -> FADD_START
+# Time:                 7135 | State -> FADD_WAIT
+# Time:                 7175 | State -> FADD_COMPLETE
+# Time:                 7185 | State -> IDLE
+# Time:                 7195 | ✓ Operation completed
+# Time:                 7195 | Write-back: freg[ 3] = 0x3e99999a
+# ✓ PASS: freg[ 3] = 0x3e99999a
+# 
+# === Testing FSW: Store result 0.3 ===
+# Time:                 7245 | State -> FSW_ACCESS
+# Time:                 7255 | State -> FSW_WAIT_READY
+# Time:                 7275 | State -> FSW_COMPLETE
+# Time:                 7285 | State -> IDLE
+# Time:                 7295 | ✓ Operation completed
+# ✓ PASS: Memory[0x00003000] = 0x3e99999a
+# 
+# --- 序列 2: 數學常數計算 ---
+# 
+# === Testing FADD:           π + e ===
+# FADD: 0x40490fdb + 0x402df854 -> freg[ 4]
+# Time:                 7375 | State -> FADD_START
+# Time:                 7385 | State -> FADD_WAIT
+# Time:                 7425 | State -> FADD_COMPLETE
+# Time:                 7435 | State -> IDLE
+# Time:                 7445 | ✓ Operation completed
+# Time:                 7445 | Write-back: freg[ 4] = 0x40bb8418
+# ✗ FAIL: Expected freg[ 4] = 0x40b5c28f, Got freg[ 4] = 0x40bb8418
+# 
+# === Testing FADD:  (π + e) + √2 ===
+# FADD: 0x40b5c28f + 0x3fb504f3 -> freg[ 5]
+# Time:                 7495 | State -> FADD_START
+# Time:                 7505 | State -> FADD_WAIT
+# Time:                 7545 | State -> FADD_COMPLETE
+# Time:                 7555 | State -> IDLE
+# Time:                 7565 | ✓ Operation completed
+# Time:                 7565 | Write-back: freg[ 5] = 0x40e303cc
+# ✗ FAIL: Expected freg[ 5] = 0x40d6c7a2, Got freg[ 5] = 0x40e303cc
+# 
+# === Testing FSW: e complex result ===
+# Time:                 7615 | State -> FSW_ACCESS
+# Time:                 7625 | State -> FSW_WAIT_READY
+# Time:                 7645 | State -> FSW_COMPLETE
+# Time:                 7655 | State -> IDLE
+# Time:                 7665 | ✓ Operation completed
+# ✓ PASS: Memory[0x00003004] = 0x40d6c7a2
+# 
+# --- 序列 3: 連續精密小數累加 ---
+# 
+# === Testing FADD: 01 + 0.01 = 0.02 ===
+# FADD: 0x3c23d70a + 0x3c23d70a -> freg[ 6]
+# Time:                 7745 | State -> FADD_START
+# Time:                 7755 | State -> FADD_WAIT
+# Time:                 7795 | State -> FADD_COMPLETE
+# Time:                 7805 | State -> IDLE
+# Time:                 7815 | ✓ Operation completed
+# Time:                 7815 | Write-back: freg[ 6] = 0x3ca3d70a
+# ✓ PASS: freg[ 6] = 0x3ca3d70a
+# 
+# === Testing FADD: 02 + 0.01 = 0.03 ===
+# FADD: 0x3ca3d70a + 0x3c23d70a -> freg[ 7]
+# Time:                 7865 | State -> FADD_START
+# Time:                 7875 | State -> FADD_WAIT
+# Time:                 7915 | State -> FADD_COMPLETE
+# Time:                 7925 | State -> IDLE
+# Time:                 7935 | ✓ Operation completed
+# Time:                 7935 | Write-back: freg[ 7] = 0x3cf5c28f
+# ✓ PASS: freg[ 7] = 0x3cf5c28f
+# 
+# === Testing FADD: 03 + 0.01 = 0.04 ===
+# FADD: 0x3cf5c28f + 0x3c23d70a -> freg[ 8]
+# Time:                 7985 | State -> FADD_START
+# Time:                 7995 | State -> FADD_WAIT
+# Time:                 8035 | State -> FADD_COMPLETE
+# Time:                 8045 | State -> IDLE
+# Time:                 8055 | ✓ Operation completed
+# Time:                 8055 | Write-back: freg[ 8] = 0x3d23d70a
+# ✓ PASS: freg[ 8] = 0x3d23d70a
+# 
+# === Testing FADD: 04 + 0.01 = 0.05 ===
+# FADD: 0x3d23d70a + 0x3c23d70a -> freg[ 9]
+# Time:                 8105 | State -> FADD_START
+# Time:                 8115 | State -> FADD_WAIT
+# Time:                 8155 | State -> FADD_COMPLETE
+# Time:                 8165 | State -> IDLE
+# Progress: Completed          60 operations
+# Time:                 8175 | ✓ Operation completed
+# Time:                 8175 | Write-back: freg[ 9] = 0x3d4ccccc
+# ✗ FAIL: Expected freg[ 9] = 0x3d4ccccd, Got freg[ 9] = 0x3d4ccccc
+# 
+# ========== 邊界和錯誤情況測試 ==========
+# 
+# === Testing FLW:       Load to f0 ===
+# Time:                 8245 | State -> FLW_ACCESS
+# Time:                 8255 | State -> FLW_WAIT_READY
+# Time:                 8275 | State -> FLW_WAIT_DATA
+# Time:                 8285 | State -> FLW_STABILIZE
+# Time:                 8295 | State -> FLW_SAMPLE
+# Time:                 8305 | State -> FLW_COMPLETE
+# Time:                 8315 | State -> IDLE
+# Time:                 8325 | ✓ Operation completed
+# Time:                 8325 | Write-back: freg[ 0] = 0x3f800000
+# ✓ PASS: freg[ 0] = 0x3f800000
+# 
+# === Testing FLW:      Load to f31 ===
+# Time:                 8375 | State -> FLW_ACCESS
+# Time:                 8385 | State -> FLW_WAIT_READY
+# Time:                 8405 | State -> FLW_WAIT_DATA
+# Time:                 8415 | State -> FLW_STABILIZE
+# Time:                 8425 | State -> FLW_SAMPLE
+# Time:                 8435 | State -> FLW_COMPLETE
+# Time:                 8445 | State -> IDLE
+# Time:                 8455 | ✓ Operation completed
+# Time:                 8455 | Write-back: freg[31] = 0x40000000
+# Time:                 8455 | Precision Test Result: freg[31] = 0x40000000
+# ✓ PASS: freg[31] = 0x40000000
+# 
+# === Testing FLW: from max address ===
+# Time:                 8505 | State -> FLW_ACCESS
+# Time:                 8515 | State -> FLW_WAIT_READY
+# Time:                 8535 | State -> FLW_WAIT_DATA
+# Time:                 8545 | State -> FLW_STABILIZE
+# Time:                 8555 | State -> FLW_SAMPLE
+# Time:                 8565 | State -> FLW_COMPLETE
+# Time:                 8575 | State -> IDLE
+# Time:                 8585 | ✓ Operation completed
+# Time:                 8585 | Write-back: freg[ 7] = 0x42c80000
+# ✓ PASS: freg[ 7] = 0x42c80000
+# 
+# === Testing FSW: near max address ===
+# Time:                 8635 | State -> FSW_ACCESS
+# Time:                 8645 | State -> FSW_WAIT_READY
+# Time:                 8665 | State -> FSW_COMPLETE
+# Time:                 8675 | State -> IDLE
+# Time:                 8685 | ✓ Operation completed
+# ✓ PASS: Memory[0x00003ff8] = 0x42c80000
+# 
+# --- 擴展精度邊界測試 ---
+# 
+# === Testing FADD: �數 + 極小數 ===
+# FADD: 0x3f7fffff + 0x33800000 -> freg[10]
+# Time:                 8765 | State -> FADD_START
+# Time:                 8775 | State -> FADD_WAIT
+# Time:                 8815 | State -> FADD_COMPLETE
+# Time:                 8825 | State -> IDLE
+# Time:                 8835 | ✓ Operation completed
+# Time:                 8835 | Write-back: freg[10] = 0x3f800000
+# ✓ PASS: freg[10] = 0x3f800000
+# 
+# === Testing FADD:  極小數 = 2.0 ===
+# FADD: 0x40000000 + 0x33000000 -> freg[11]
+# Time:                 8905 | State -> FADD_START
+# Time:                 8915 | State -> FADD_WAIT
+# Time:                 8955 | State -> FADD_COMPLETE
+# Time:                 8965 | State -> IDLE
+# Time:                 8975 | ✓ Operation completed
+# Time:                 8975 | Write-back: freg[11] = 0x40000000
+# ✓ PASS: freg[11] = 0x40000000
+# 
+# --- 負零特殊處理 ---
+# 
+# === Testing FADD:  + (-0.0) = -0.0 ===
+# FADD: 0x80000000 + 0x80000000 -> freg[12]
+# Time:                 9045 | State -> FADD_START
+# Time:                 9055 | State -> FADD_WAIT
+# Time:                 9095 | State -> FADD_COMPLETE
+# Time:                 9105 | State -> IDLE
+# Time:                 9115 | ✓ Operation completed
+# Time:                 9115 | Write-back: freg[12] = 0x80000000
+# ✓ PASS: freg[12] = 0x80000000
+# 
+# === Testing FADD: -0.0 (有可能) ===
+# FADD: 0xbdcccccd + 0x3dcccccd -> freg[13]
+# Time:                 9185 | State -> FADD_START
+# Time:                 9195 | State -> FADD_WAIT
+# Time:                 9235 | State -> FADD_COMPLETE
+# Time:                 9245 | State -> IDLE
+# Time:                 9255 | ✓ Operation completed
+# Time:                 9255 | Write-back: freg[13] = 0xb0000000
+# ✗ FAIL: Expected freg[13] = 0x80000000, Got freg[13] = 0xb0000000
+# 
+# --- 舍入邊界測試 ---
+# 
+# === Testing FADD: ��偶數測試 1 ===
+# FADD: 0x3f800000 + 0x33000001 -> freg[14]
+# Time:                 9325 | State -> FADD_START
+# Time:                 9335 | State -> FADD_WAIT
+# Time:                 9375 | State -> FADD_COMPLETE
+# Time:                 9385 | State -> IDLE
+# Time:                 9395 | ✓ Operation completed
+# Time:                 9395 | Write-back: freg[14] = 0x3f800001
+# ✗ FAIL: Expected freg[14] = 0x3f800000, Got freg[14] = 0x3f800001
+# 
+# === Testing FADD: ��偶數測試 2 ===
+# FADD: 0x3f800001 + 0x33000000 -> freg[15]
+# Time:                 9465 | State -> FADD_START
+# Time:                 9475 | State -> FADD_WAIT
+# Time:                 9515 | State -> FADD_COMPLETE
+# Time:                 9525 | State -> IDLE
+# Progress: Completed          70 operations
+# Time:                 9535 | ✓ Operation completed
+# Time:                 9535 | Write-back: freg[15] = 0x3f800002
+# ✗ FAIL: Expected freg[15] = 0x3f800001, Got freg[15] = 0x3f800002
+# 
+# ========== 壓力測試 ==========
+# 
+# --- 快速連續 FLW 操作 (精密小數) ---
+# 
+# === Testing FLW:    Fast Load 0.1 ===
+# Time:                 9605 | State -> FLW_ACCESS
+# Time:                 9615 | State -> FLW_WAIT_READY
+# Time:                 9635 | State -> FLW_WAIT_DATA
+# Time:                 9645 | State -> FLW_STABILIZE
+# Time:                 9655 | State -> FLW_SAMPLE
+# Time:                 9665 | State -> FLW_COMPLETE
+# Time:                 9675 | State -> IDLE
+# Time:                 9685 | ✓ Operation completed
+# Time:                 9685 | Write-back: freg[16] = 0x3dcccccd
+# Time:                 9685 | Precision Test Result: freg[16] = 0x3dcccccd
+# ✓ PASS: freg[16] = 0x3dcccccd
+# 
+# === Testing FLW:    Fast Load 0.2 ===
+# Time:                 9705 | State -> FLW_ACCESS
+# Time:                 9715 | State -> FLW_WAIT_READY
+# Time:                 9735 | State -> FLW_WAIT_DATA
+# Time:                 9745 | State -> FLW_STABILIZE
+# Time:                 9755 | State -> FLW_SAMPLE
+# Time:                 9765 | State -> FLW_COMPLETE
+# Time:                 9775 | State -> IDLE
+# Time:                 9785 | ✓ Operation completed
+# Time:                 9785 | Write-back: freg[17] = 0x3e4ccccd
+# Time:                 9785 | Precision Test Result: freg[17] = 0x3e4ccccd
+# ✓ PASS: freg[17] = 0x3e4ccccd
+# 
+# === Testing FLW:   Fast Load 0.01 ===
+# Time:                 9805 | State -> FLW_ACCESS
+# Time:                 9815 | State -> FLW_WAIT_READY
+# Time:                 9835 | State -> FLW_WAIT_DATA
+# Time:                 9845 | State -> FLW_STABILIZE
+# Time:                 9855 | State -> FLW_SAMPLE
+# Time:                 9865 | State -> FLW_COMPLETE
+# Time:                 9875 | State -> IDLE
+# Time:                 9885 | ✓ Operation completed
+# Time:                 9885 | Write-back: freg[18] = 0x3c23d70a
+# Time:                 9885 | Precision Test Result: freg[18] = 0x3c23d70a
+# ✓ PASS: freg[18] = 0x3c23d70a
+# 
+# --- 快速連續 FADD 操作 (累積計算) ---
+# 
+# === Testing FADD: ADD: 0.01 + 0.01 ===
+# FADD: 0x3c23d70a + 0x3c23d70a -> freg[19]
+# Time:                 9955 | State -> FADD_START
+# Time:                 9965 | State -> FADD_WAIT
+# Time:                10005 | State -> FADD_COMPLETE
+# Time:                10015 | State -> IDLE
+# Time:                10025 | ✓ Operation completed
+# Time:                10025 | Write-back: freg[19] = 0x3ca3d70a
+# Time:                10025 | Precision Test Result: freg[19] = 0x3ca3d70a
+# ✓ PASS: freg[19] = 0x3ca3d70a
+# 
+# === Testing FADD: ADD: 0.02 + 0.01 ===
+# FADD: 0x3ca3d70a + 0x3c23d70a -> freg[20]
+# Time:                10045 | State -> FADD_START
+# Time:                10055 | State -> FADD_WAIT
+# Time:                10095 | State -> FADD_COMPLETE
+# Time:                10105 | State -> IDLE
+# Time:                10115 | ✓ Operation completed
+# Time:                10115 | Write-back: freg[20] = 0x3cf5c28f
+# Time:                10115 | Precision Test Result: freg[20] = 0x3cf5c28f
+# ✓ PASS: freg[20] = 0x3cf5c28f
+# 
+# === Testing FADD: ADD: 0.03 + 0.01 ===
+# FADD: 0x3cf5c28f + 0x3c23d70a -> freg[21]
+# Time:                10135 | State -> FADD_START
+# Time:                10145 | State -> FADD_WAIT
+# Time:                10185 | State -> FADD_COMPLETE
+# Time:                10195 | State -> IDLE
+# Time:                10205 | ✓ Operation completed
+# Time:                10205 | Write-back: freg[21] = 0x3d23d70a
+# Time:                10205 | Precision Test Result: freg[21] = 0x3d23d70a
+# ✓ PASS: freg[21] = 0x3d23d70a
+# 
+# --- 極限精度挑戰測試 ---
+# 
+# === Testing FADD: �小正規化數 ===
+# FADD: 0x7f7fffff + 0x00800000 -> freg[22]
+# Time:                10275 | State -> FADD_START
+# Time:                10285 | State -> FADD_WAIT
+# Time:                10325 | State -> FADD_COMPLETE
+# Time:                10335 | State -> IDLE
+# Time:                10345 | ✓ Operation completed
+# Time:                10345 | Write-back: freg[22] = 0x7f800000
+# Time:                10345 | Precision Test Result: freg[22] = 0x7f800000
+# Time:                10345 | Special: +Infinity detected
+# ✗ FAIL: Expected freg[22] = 0x7f7fffff, Got freg[22] = 0x7f800000
+# 
+# === Testing FADD: �非正規化數 ===
+# FADD: 0x00800000 + 0x00000001 -> freg[23]
+# Time:                10415 | State -> FADD_START
+# Time:                10425 | State -> FADD_WAIT
+# Time:                10465 | State -> FADD_COMPLETE
+# Time:                10475 | State -> IDLE
+# Time:                10485 | ✓ Operation completed
+# Time:                10485 | Write-back: freg[23] = 0x00800001
+# Time:                10485 | Precision Test Result: freg[23] = 0x00800001
+# ✓ PASS: freg[23] = 0x00800001
+# 
+# === Testing FADD: �小正規化數 ===
+# FADD: 0xff7fffff + 0x80800000 -> freg[24]
+# Time:                10555 | State -> FADD_START
+# Time:                10565 | State -> FADD_WAIT
+# Time:                10605 | State -> FADD_COMPLETE
+# Time:                10615 | State -> IDLE
+# Time:                10625 | ✓ Operation completed
+# Time:                10625 | Write-back: freg[24] = 0xff800000
+# Time:                10625 | Precision Test Result: freg[24] = 0xff800000
+# Time:                10625 | Special: -Infinity detected
+# ✗ FAIL: Expected freg[24] = 0xff7fffff, Got freg[24] = 0xff800000
+# 
+# --- 混合精度範圍測試 ---
+# 
+# === Testing FADD:  + 0.01 = 100.01 ===
+# FADD: 0x42c80000 + 0x3c23d70a -> freg[25]
+# Time:                10695 | State -> FADD_START
+# Time:                10705 | State -> FADD_WAIT
+# Time:                10745 | State -> FADD_COMPLETE
+# Time:                10755 | State -> IDLE
+# Progress: Completed          80 operations
+# Time:                10765 | ✓ Operation completed
+# Time:                10765 | Write-back: freg[25] = 0x42c8051f
+# Time:                10765 | Precision Test Result: freg[25] = 0x42c8051f
+# ✓ PASS: freg[25] = 0x42c8051f
+# 
+# === Testing FADD: 0 (精度損失) ===
+# FADD: 0x447a0000 + 0x3a83126f -> freg[26]
+# Time:                10835 | State -> FADD_START
+# Time:                10845 | State -> FADD_WAIT
+# Time:                10885 | State -> FADD_COMPLETE
+# Time:                10895 | State -> IDLE
+# Time:                10905 | ✓ Operation completed
+# Time:                10905 | Write-back: freg[26] = 0x447a0010
+# Time:                10905 | Precision Test Result: freg[26] = 0x447a0010
+# ✗ FAIL: Expected freg[26] = 0x447a0000, Got freg[26] = 0x447a0010
+# 
+# === Testing FADD: 0 (精度損失) ===
+# FADD: 0x461c4000 + 0x39d1b717 -> freg[27]
+# Time:                10975 | State -> FADD_START
+# Time:                10985 | State -> FADD_WAIT
+# Time:                11025 | State -> FADD_COMPLETE
+# Time:                11035 | State -> IDLE
+# Time:                11045 | ✓ Operation completed
+# Time:                11045 | Write-back: freg[27] = 0x461c4001
+# Time:                11045 | Precision Test Result: freg[27] = 0x461c4001
+# ✗ FAIL: Expected freg[27] = 0x461c4000, Got freg[27] = 0x461c4001
+# 
+# --- 數學級數相關測試 ---
+# 
+# === Testing FADD:  2 (e級數項1) ===
+# FADD: 0x3f800000 + 0x3f800000 -> freg[28]
+# Time:                11115 | State -> FADD_START
+# Time:                11125 | State -> FADD_WAIT
+# Time:                11165 | State -> FADD_COMPLETE
+# Time:                11175 | State -> IDLE
+# Time:                11185 | ✓ Operation completed
+# Time:                11185 | Write-back: freg[28] = 0x40000000
+# Time:                11185 | Precision Test Result: freg[28] = 0x40000000
+# ✓ PASS: freg[28] = 0x40000000
+# 
+# === Testing FADD: .5 (e級數項2) ===
+# FADD: 0x40000000 + 0x3f000000 -> freg[29]
+# Time:                11235 | State -> FADD_START
+# Time:                11245 | State -> FADD_WAIT
+# Time:                11285 | State -> FADD_COMPLETE
+# Time:                11295 | State -> IDLE
+# Time:                11305 | ✓ Operation completed
+# Time:                11305 | Write-back: freg[29] = 0x40200000
+# Time:                11305 | Precision Test Result: freg[29] = 0x40200000
+# ✗ FAIL: Expected freg[29] = 0x40400000, Got freg[29] = 0x40200000
+# 
+# === Testing FADD: 67 (e級數項3) ===
+# FADD: 0x40400000 + 0x3e2aaaab -> freg[30]
+# Time:                11355 | State -> FADD_START
+# Time:                11365 | State -> FADD_WAIT
+# Time:                11405 | State -> FADD_COMPLETE
+# Time:                11415 | State -> IDLE
+# Time:                11425 | ✓ Operation completed
+# Time:                11425 | Write-back: freg[30] = 0x404aaaab
+# Time:                11425 | Precision Test Result: freg[30] = 0x404aaaab
+# ✗ FAIL: Expected freg[30] = 0x4051555c, Got freg[30] = 0x404aaaab
+# 
+# === Testing FADD: 5 (諧波級數) ===
+# FADD: 0x3f800000 + 0x3f000000 -> freg[31]
+# Time:                11495 | State -> FADD_START
+# Time:                11505 | State -> FADD_WAIT
+# Time:                11545 | State -> FADD_COMPLETE
+# Time:                11555 | State -> IDLE
+# Time:                11565 | ✓ Operation completed
+# Time:                11565 | Write-back: freg[31] = 0x3fc00000
+# Time:                11565 | Precision Test Result: freg[31] = 0x3fc00000
+# ✓ PASS: freg[31] = 0x3fc00000
+# 
+# === Testing FADD: 3 (諧波級數) ===
+# FADD: 0x3fc00000 + 0x3eaaaaab -> freg[ 0]
+# Time:                11615 | State -> FADD_START
+# Time:                11625 | State -> FADD_WAIT
+# Time:                11665 | State -> FADD_COMPLETE
+# Time:                11675 | State -> IDLE
+# Time:                11685 | ✓ Operation completed
+# Time:                11685 | Write-back: freg[ 0] = 0x3feaaaab
+# ✗ FAIL: Expected freg[ 0] = 0x4008aaab, Got freg[ 0] = 0x3feaaaab
+# 
+# ========== 特殊數值組合測試 ==========
+# 
+# --- 溢位邊界測試 ---
+# 
+# === Testing FADD:  = +Inf (溢位) ===
+# FADD: 0x7f000000 + 0x7e800000 -> freg[ 1]
+# Time:                11755 | State -> FADD_START
+# Time:                11765 | State -> FADD_WAIT
+# Time:                11805 | State -> FADD_COMPLETE
+# Time:                11815 | State -> IDLE
+# Time:                11825 | ✓ Operation completed
+# Time:                11825 | Write-back: freg[ 1] = 0x7f400000
+# ✗ FAIL: Expected freg[ 1] = 0x7f800000, Got freg[ 1] = 0x7f400000
+# 
+# === Testing FADD:  = -Inf (溢位) ===
+# FADD: 0xff000000 + 0xfe800000 -> freg[ 2]
+# Time:                11895 | State -> FADD_START
+# Time:                11905 | State -> FADD_WAIT
+# Time:                11945 | State -> FADD_COMPLETE
+# Time:                11955 | State -> IDLE
+# Time:                11965 | ✓ Operation completed
+# Time:                11965 | Write-back: freg[ 2] = 0xff400000
+# ✗ FAIL: Expected freg[ 2] = 0xff800000, Got freg[ 2] = 0xff400000
+# 
+# --- 下溢邊界測試 ---
+# 
+# === Testing FADD: �數 + 極小數 ===
+# FADD: 0x00000001 + 0x00000001 -> freg[ 3]
+# Time:                12035 | State -> FADD_START
+# Time:                12045 | State -> FADD_WAIT
+# Time:                12085 | State -> FADD_COMPLETE
+# Time:                12095 | State -> IDLE
+# Progress: Completed          90 operations
+# Time:                12105 | ✓ Operation completed
+# Time:                12105 | Write-back: freg[ 3] = 0x00000002
+# Time:                12105 | Special: Denormalized number detected
+# ✓ PASS: freg[ 3] = 0x00000002
+# 
+# === Testing FADD:  + 小負數 = 0 ===
+# FADD: 0x00400000 + 0x80400000 -> freg[ 4]
+# Time:                12175 | State -> FADD_START
+# Time:                12185 | State -> FADD_WAIT
+# Time:                12225 | State -> FADD_COMPLETE
+# Time:                12235 | State -> IDLE
+# Time:                12245 | ✓ Operation completed
+# Time:                12245 | Write-back: freg[ 4] = 0x00000000
+# ✓ PASS: freg[ 4] = 0x00000000
+# 
+# --- 相同指數測試 ---
+# 
+# === Testing FADD:  + 0.625 = 1.375 ===
+# FADD: 0x3f400000 + 0x3f200000 -> freg[ 5]
+# Time:                12315 | State -> FADD_START
+# Time:                12325 | State -> FADD_WAIT
+# Time:                12365 | State -> FADD_COMPLETE
+# Time:                12375 | State -> IDLE
+# Time:                12385 | ✓ Operation completed
+# Time:                12385 | Write-back: freg[ 5] = 0x3fb00000
+# ✗ FAIL: Expected freg[ 5] = 0x3f600000, Got freg[ 5] = 0x3fb00000
+# 
+# === Testing FADD: .5 + 2.25 = 4.75 ===
+# FADD: 0x40200000 + 0x40100000 -> freg[ 6]
+# Time:                12455 | State -> FADD_START
+# Time:                12465 | State -> FADD_WAIT
+# Time:                12505 | State -> FADD_COMPLETE
+# Time:                12515 | State -> IDLE
+# Time:                12525 | ✓ Operation completed
+# Time:                12525 | Write-back: freg[ 6] = 0x40980000
+# ✗ FAIL: Expected freg[ 6] = 0x40300000, Got freg[ 6] = 0x40980000
+# 
+# --- 不同指數測試 ---
+# 
+# === Testing FADD: .0 + 0.25 = 1.25 ===
+# FADD: 0x3f800000 + 0x3e800000 -> freg[ 7]
+# Time:                12595 | State -> FADD_START
+# Time:                12605 | State -> FADD_WAIT
+# Time:                12645 | State -> FADD_COMPLETE
+# Time:                12655 | State -> IDLE
+# Time:                12665 | ✓ Operation completed
+# Time:                12665 | Write-back: freg[ 7] = 0x3fa00000
+# ✗ FAIL: Expected freg[ 7] = 0x3fc00000, Got freg[ 7] = 0x3fa00000
+# 
+# === Testing FADD:  4.0 + 1.0 = 5.0 ===
+# FADD: 0x40800000 + 0x3f800000 -> freg[ 8]
+# Time:                12735 | State -> FADD_START
+# Time:                12745 | State -> FADD_WAIT
+# Time:                12785 | State -> FADD_COMPLETE
+# Time:                12795 | State -> IDLE
+# Time:                12805 | ✓ Operation completed
+# Time:                12805 | Write-back: freg[ 8] = 0x40a00000
+# ✓ PASS: freg[ 8] = 0x40a00000
+# 
+# ========== 最終統合測試 ==========
+# 
+# --- 複雜精密計算鏈 ---
+# 
+# === Testing FADD: Step1: 0.1 + 0.2 ===
+# FADD: 0x3dcccccd + 0x3e4ccccd -> freg[ 9]
+# Time:                12875 | State -> FADD_START
+# Time:                12885 | State -> FADD_WAIT
+# Time:                12925 | State -> FADD_COMPLETE
+# Time:                12935 | State -> IDLE
+# Time:                12945 | ✓ Operation completed
+# Time:                12945 | Write-back: freg[ 9] = 0x3e99999a
+# ✓ PASS: freg[ 9] = 0x3e99999a
+# 
+# === Testing FSW: ermediate result ===
+# Time:                12995 | State -> FSW_ACCESS
+# Time:                13005 | State -> FSW_WAIT_READY
+# Time:                13025 | State -> FSW_COMPLETE
+# Time:                13035 | State -> IDLE
+# Time:                13045 | ✓ Operation completed
+# ✓ PASS: Memory[0x00004000] = 0x3e99999a
+# 
+# === Testing FADD:        π + √2 ===
+# FADD: 0x40490fdb + 0x3fb504f3 -> freg[10]
+# Time:                13125 | State -> FADD_START
+# Time:                13135 | State -> FADD_WAIT
+# Time:                13175 | State -> FADD_COMPLETE
+# Time:                13185 | State -> IDLE
+# Time:                13195 | ✓ Operation completed
+# Time:                13195 | Write-back: freg[10] = 0x4091c92a
+# ✗ FAIL: Expected freg[10] = 0x408c4a9e, Got freg[10] = 0x4091c92a
+# 
+# === Testing FADD:  (π + √2) + e ===
+# FADD: 0x408c4a9e + 0x402df854 -> freg[11]
+# Time:                13245 | State -> FADD_START
+# Time:                13255 | State -> FADD_WAIT
+# Time:                13295 | State -> FADD_COMPLETE
+# Time:                13305 | State -> IDLE
+# Time:                13315 | ✓ Operation completed
+# Time:                13315 | Write-back: freg[11] = 0x40e346c8
+# ✗ FAIL: Expected freg[11] = 0x40b3295c, Got freg[11] = 0x40e346c8
+# 
+# ========== 錯誤情況和邊界測試 ==========
+# 
+# --- FPU 狀態測試 ---
+# ✓ FPU is idle, ready for operation
+# 
+# === Testing FLW: d from address 0 ===
+# Time:                13385 | State -> FLW_ACCESS
+# Time:                13395 | State -> FLW_WAIT_READY
+# Time:                13415 | State -> FLW_WAIT_DATA
+# Time:                13425 | State -> FLW_STABILIZE
+# Time:                13435 | State -> FLW_SAMPLE
+# Time:                13445 | State -> FLW_COMPLETE
+# Time:                13455 | State -> IDLE
+# Progress: Completed         100 operations
+# Time:                13465 | ✓ Operation completed
+# Time:                13465 | Write-back: freg[12] = 0x3e99999a
+# ✗ FAIL: Expected freg[12] = 0x00000000, Got freg[12] = 0x3e99999a
+# 
+# --- 完整性檢查 ---
+# 
+# === Testing FADD:  1.0 + 0.0 = 1.0 ===
+# FADD: 0x3f800000 + 0x00000000 -> freg[13]
+# Time:                13535 | State -> FADD_START
+# Time:                13545 | State -> FADD_WAIT
+# Time:                13585 | State -> FADD_COMPLETE
+# Time:                13595 | State -> IDLE
+# Time:                13605 | ✓ Operation completed
+# Time:                13605 | Write-back: freg[13] = 0x3f800000
+# ✓ PASS: freg[13] = 0x3f800000
+# 
+# ========== 測試結果統計 ==========
+# 總測試數:         101
+# 通過:          70
+# 失敗:          31
+# 通過率: 69.31%
+# ❌ 有較多測試失敗(         31個)，需要檢查 FPU 實作
+# 
+# === 精密小數 FPU 測試完成 ===
+# 測試涵蓋範圍:
+# - 基本精密小數加法 (0.1, 0.01, 0.001 等)
+# - 數學常數計算 (π, e, √2 等)
+# - 機器精度邊界測試
+# - 溢位和下溢處理
+# - 特殊值處理 (0, ±Inf, NaN)
+# - 精度損失檢測
+# - 舍入行為驗證
+# ** Note: $finish    : /home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0_tb.v(645)
+#    Time: 13765 ps  Iteration: 0  Instance: /fpu_comprehensive_tb
+# 1
+# Break in Module fpu_comprehensive_tb at /home/rissun57/Desktop/Github/mcuee_2025_1/RISC-V-Project/RTL/FPU/sim/fpu_0_tb.v line 645
+# End time: 23:46:58 on Sep 28,2025, Elapsed time: 0:06:40
+# Errors: 1, Warnings: 6
