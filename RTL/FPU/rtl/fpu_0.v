@@ -198,9 +198,33 @@ module fpu #(
     // Sequential output and control logic
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            {mem_addr, mem_wdata, reg_wb_data, temp_mem_addr, temp_mem_wdata, temp_freg_rs1, temp_freg_rs2, temp_freg_wb_data} <= 256'b0;
-            {mem_we, mem_re, completed, reg_wb_enable, fadd_start, fsub_start, temp_freg_wb_enable} <= 7'b0;
-            {reg_wb_addr, target_frd, temp_freg_wb_addr} <= 15'b0;
+            // Memory & reg temp
+            mem_addr             <= 32'b0;
+            mem_wdata            <= 32'b0;
+            temp_mem_addr        <= 32'b0;
+            temp_mem_wdata       <= 32'b0;
+
+            // FPU register temp
+            temp_freg_rs1        <= 32'b0;
+            temp_freg_rs2        <= 32'b0;
+            temp_freg_wb_data    <= 32'b0;
+
+            // Write-back & control flags
+            mem_we               <= 1'b0;
+            mem_re               <= 1'b0;
+            completed            <= 1'b0;
+            reg_wb_enable        <= 1'b0;
+            fadd_start           <= 1'b0;
+            fsub_start           <= 1'b0;
+            temp_freg_wb_enable  <= 1'b0;
+
+            // Register addresses
+            reg_wb_addr          <= 5'b0;
+            target_frd           <= 5'b0;
+            temp_freg_wb_addr    <= 5'b0;
+
+            // FPU state
+            state                <= NONE;
         end else begin
             completed           <= 1'b0;
             mem_we              <= 1'b0;

@@ -1,5 +1,5 @@
 $date
-	Mon Oct 20 22:52:02 2025
+	Mon Oct 20 22:57:12 2025
 $end
 $version
 	Icarus Verilog
@@ -546,7 +546,7 @@ b0 o
 b0 n
 b0 m
 b0 l
-b0 k
+bx k
 b0 j
 b0 i
 b0 h
@@ -601,7 +601,7 @@ b0 '
 b0 %
 0$
 b0 #
-b0 "
+bx "
 0!
 $end
 #5
