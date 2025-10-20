@@ -1,263 +1,155 @@
+`default_nettype none
+
 module fadd_s(
-    x1,
-    x2,
-
-    clk,
-    rst_n,
-
-    enable_in,
-    enable_out,
-
-    y,
-    ovf
+    input  wire [31:0] x1,
+    input  wire [31:0] x2,
+    input  wire        clk,
+    input  wire        rst_n,
+    input  wire        enable_in,
+    output wire        enable_out,
+    output wire [31:0] y,
+    output wire        ovf
 );
-    // declare
-    input [31:0] x1;
-    input [31:0] x2;
+    // 1. 分解浮點數
+    wire s1 = x1[31];
+    wire [7:0]  e1 = x1[30:23];
+    wire [22:0] m1 = x1[22:0];
+    wire s2 = x2[31];
+    wire [7:0]  e2 = x2[30:23];
+    wire [22:0] m2 = x2[22:0];
 
-    input clk;
-    input rst_n;
+    // 2. 將隱含位加入
+    wire [24:0] m1a = (e1 == 8'b0) ? {2'b0, m1} : {2'b1, m1};
+    wire [24:0] m2a = (e2 == 8'b0) ? {2'b0, m2} : {2'b1, m2};
 
-    input  enable_in;
-    output enable_out;
+    // 3. 調整指數
+    wire [7:0] e1a = (e1 == 8'b0) ? 8'b1 : e1;
+    wire [7:0] e2a = (e2 == 8'b0) ? 8'b1 : e2;
 
-    output [31:0] y;
-    output ovf;
-    
-    // preprocess
-    /* IEEE-754 format
-      bit31       bit30-23       bit22-0
-      symbol(s)   exponent(e)    mantissa(m)
-    */
-    // x1
-    wire symbol_init_x1 = x1[31];
-    wire [7:0] exp_init_x1 = x1[30:23];
-    wire [22:0] man_init_x1 = x1[22:0];
-    // x2
-    wire symbol_init_x2 = x2[31];
-    wire [7:0] exp_init_x2 = x2[30:23];
-    wire [22:0] man_init_x2 = x2[22:0];
+    // 4~7. 計算指數差及選擇控制
+    wire [7:0]  e2ai = ~e2a;
+    wire [8:0]  te   = {1'b0, e1a} + {1'b0, e2ai};
+    wire        ce   = (te[8]) ? 1'b0 : 1'b1;
+    wire [8:0]  te1  = te + 9'b1;
+    wire [8:0]  te2  = ~te;
+    wire [7:0]  tde  = (te[8]) ? te1[7:0] : te2[7:0];
+    wire [4:0]  de   = (|(tde[7:5])) ? 5'd31 : tde[4:0];
+    wire        sel  = (de > 5'b0) ? ce : (m1a > m2a) ? 1'b0 : 1'b1;
 
-    // extented
-    wire [24:0] man_ext_x1 = (exp_init_x1 == 8'd0) ? {2'b0, man_init_x1} : {2'b1, man_init_x1};
-    wire [24:0] man_ext_x2 = (exp_init_x2 == 8'd0) ? {2'b0, man_init_x2} : {2'b1, man_init_x2};
-
-    // normalize_exp
-    wire [7:0] exp_norm_x1 = (exp_init_x1 == 8'd0) ? {8'd1} : exp_init_x1;
-    wire [7:0] exp_norm_x2 = (exp_init_x2 == 8'd0) ? {8'd1} : exp_init_x2;
-    wire [7:0] exp_norm_x2_i = ~exp_norm_x2;
-    
-    // exponent diff
-    wire [8:0] te_diff = {1'b0, exp_norm_x1} - {1'b0, exp_norm_x2};
-    wire ce = (te_diff[8] == 1'b1) ? 1'b0 : 1'b1;
-    wire [7:0] tde = (te_diff[8] == 1'b1) ? (~te_diff[7:0] + 8'd1) : te_diff[7:0];
-    wire [4:0] de = (tde >= 8'd24) ? 5'd24 : tde[4:0];
-    
-    // sel => if sel=1 x1 is main, else x2 is main
-    wire sel = (exp_norm_x2 > exp_norm_x1) ? 1'b1 :
-               (exp_norm_x1 > exp_norm_x2) ? 1'b0 :
-               (man_ext_x2 > man_ext_x1) ? 1'b1 : 1'b0;
-
-    // Pipelining Stage 1
-    reg [22:0] man_init_x1_st1;
-    reg [22:0] man_init_x2_st1;
-    reg [24:0] man_st1_x1;
-    reg [24:0] man_st1_x2;
-    reg symbol_st1_x1;
-    reg symbol_st1_x2;
-    reg [4:0] de_st1;
-    reg sel_st1;
-    reg [7:0] exp_init_x1_st1;
-    reg [7:0] exp_init_x2_st1;
-    reg [7:0] exp_st1_x1;
-    reg [7:0] exp_st1_x2;
-    reg enable_in_st1;
+    // 8. 註冊暫存器
+    logic [24:0] m1a1;
+    logic s21, s11;
+    logic [4:0]  de1;
+    logic [22:0] m11;
+    logic [7:0]  e2a1;
+    logic [22:0] m21;
+    logic [7:0]  e1a1;
+    logic        sel1;
+    logic [7:0]  e11;
+    logic [24:0] m2a1;
+    logic [7:0]  e21;
+    logic        enable_in1;
 
     always @(posedge clk) begin
-        if (~rst_n) begin
-            man_init_x1_st1 <= 23'd0;
-            man_init_x2_st1 <= 23'd0;
-            man_st1_x1 <= 25'd0;
-            man_st1_x2 <= 25'd0;
-            symbol_st1_x1 <= 1'b0;
-            symbol_st1_x2 <= 1'b0;
-            de_st1 <= 5'd0;
-            sel_st1 <= 1'b0;
-            exp_init_x1_st1 <= 8'd0;
-            exp_init_x2_st1 <= 8'd0;
-            exp_st1_x1 <= 8'd0;
-            exp_st1_x2 <= 8'd0;
-            enable_in_st1 <= 1'b0;
-        end else begin
-            man_init_x1_st1 <= man_init_x1;
-            man_init_x2_st1 <= man_init_x2;
-            man_st1_x1 <= man_ext_x1;
-            man_st1_x2 <= man_ext_x2;
-            symbol_st1_x1 <= symbol_init_x1;
-            symbol_st1_x2 <= symbol_init_x2;
-            de_st1 <= de;
-            sel_st1 <= sel;
-            exp_init_x1_st1 <= exp_init_x1;
-            exp_init_x2_st1 <= exp_init_x2;
-            exp_st1_x1 <= exp_norm_x1;
-            exp_st1_x2 <= exp_norm_x2;
-            enable_in_st1 <= enable_in;
-        end
+        m1a1       <= m1a;
+        s21        <= s2;
+        s11        <= s1;
+        de1        <= de;
+        m11        <= m1;
+        e2a1       <= e2a;
+        m21        <= m2;
+        e1a1       <= e1a;
+        sel1       <= sel;
+        e11        <= e1;
+        m2a1       <= m2a;
+        e21        <= e2;
+        enable_in1 <= enable_in;
     end
 
-    // sel significant and insignificant
-    wire [24:0] man_signi     = (sel_st1 == 1'b0) ? man_st1_x1 : man_st1_x2;
-    wire [24:0] man_insigni   = (sel_st1 == 1'b0) ? man_st1_x2 : man_st1_x1;
-    wire [7:0] exp_signi      = (sel_st1 == 1'b0) ? exp_st1_x1 : exp_st1_x2;
-    wire symbol_signi         = (sel_st1 == 1'b0) ? symbol_st1_x1 : symbol_st1_x2;
-    wire symbol_insigni       = (sel_st1 == 1'b0) ? symbol_st1_x2 : symbol_st1_x1;
+    // 9. 選擇大/小數
+    wire [24:0] ms = (sel1 == 1'b0) ? m1a1 : m2a1;
+    wire [24:0] mi = (sel1 == 1'b0) ? m2a1 : m1a1;
+    wire [7:0]  es = (sel1 == 1'b0) ? e1a1 : e2a1;
+    wire        ss = (sel1 == 1'b0) ? s11 : s21;
 
-    // mantissa align
-    wire [55:0] man_insigni_ext = {man_insigni, 31'd0};
-    wire [55:0] man_signi_ext = {man_signi, 31'd0};
-    wire [55:0] man_insigni_align = man_insigni_ext >> de_st1;
+    // 10~12. 位移微調
+    wire [55:0] mie = {mi, 31'b0};
+    wire [55:0] mia = mie >> de1;
+    wire        tstck = |mia[28:0];
 
-    // Sticky Bit process
-    wire tstck = |(man_insigni_align[28:0]);
+    // 13~16. 加減法與規範化
+    wire [26:0] mye = (s11 == s21) ? {ms,2'b0} + mia[55:29] : {ms,2'b0} - mia[55:29];
+    wire [7:0]  esi = es + 8'b1;
+    wire [7:0]  eyd = (mye[26]) ? esi : es;
+    wire [26:0] myd = (mye[26]) ? mye >> 1 : mye;
+    wire        stck = (mye[26]) ? tstck | mye[0] : tstck;
 
-    // Addition and Subtraction
-    // Using a wider datapath to handle mantissa overflow correctly
-    wire [26:0] man_y_sum = (symbol_st1_x1 == symbol_st1_x2) ?
-                            {man_signi, 2'b00} + man_insigni_align[55:29] :
-                            {man_signi, 2'b00} - man_insigni_align[55:29];
-    
-    // Check for mantissa overflow
-    wire man_overflow = man_y_sum[26];
-    
-    // Corrected exponent and mantissa after addition/subtraction, before normalization
-    wire [7:0] exp_pre_norm = exp_signi + man_overflow;
-    wire [26:0] man_pre_norm = man_overflow ? (man_y_sum >> 1) : man_y_sum;
-    
-    // Corrected sticky bit logic
-    wire stck = (man_overflow) ? (man_y_sum[0] | tstck) : tstck;
+    wire [4:0] se =
+        (myd[25]) ? 5'd0  : (myd[24]) ? 5'd1  : (myd[23]) ? 5'd2  : (myd[22]) ? 5'd3  :
+        (myd[21]) ? 5'd4  : (myd[20]) ? 5'd5  : (myd[19]) ? 5'd6  : (myd[18]) ? 5'd7  :
+        (myd[17]) ? 5'd8  : (myd[16]) ? 5'd9  : (myd[15]) ? 5'd10 : (myd[14]) ? 5'd11 :
+        (myd[13]) ? 5'd12 : (myd[12]) ? 5'd13 : (myd[11]) ? 5'd14 : (myd[10]) ? 5'd15 :
+        (myd[9])  ? 5'd16 : (myd[8])  ? 5'd17 : (myd[7])  ? 5'd18 : (myd[6])  ? 5'd19 :
+        (myd[5])  ? 5'd20 : (myd[4])  ? 5'd21 : (myd[3])  ? 5'd22 : (myd[2])  ? 5'd23 :
+        (myd[1])  ? 5'd24 : (myd[0])  ? 5'd25 : 5'd27;
 
-    // normalized
-    // search leading
-    wire [4:0] search_leading_zeros;
-    assign search_leading_zeros = (man_pre_norm[25] == 1'b1) ? 5'd0 :
-                                   (man_pre_norm[24] == 1'b1) ? 5'd1 :
-                                   (man_pre_norm[23] == 1'b1) ? 5'd2 :
-                                   (man_pre_norm[22] == 1'b1) ? 5'd3 :
-                                   (man_pre_norm[21] == 1'b1) ? 5'd4 :
-                                   (man_pre_norm[20] == 1'b1) ? 5'd5 :
-                                   (man_pre_norm[19] == 1'b1) ? 5'd6 :
-                                   (man_pre_norm[18] == 1'b1) ? 5'd7 :
-                                   (man_pre_norm[17] == 1'b1) ? 5'd8 :
-                                   (man_pre_norm[16] == 1'b1) ? 5'd9 :
-                                   (man_pre_norm[15] == 1'b1) ? 5'd10 :
-                                   (man_pre_norm[14] == 1'b1) ? 5'd11 :
-                                   (man_pre_norm[13] == 1'b1) ? 5'd12 :
-                                   (man_pre_norm[12] == 1'b1) ? 5'd13 :
-                                   (man_pre_norm[11] == 1'b1) ? 5'd14 :
-                                   (man_pre_norm[10] == 1'b1) ? 5'd15 :
-                                   (man_pre_norm[9] == 1'b1) ? 5'd16 :
-                                   (man_pre_norm[8] == 1'b1) ? 5'd17 :
-                                   (man_pre_norm[7] == 1'b1) ? 5'd18 :
-                                   (man_pre_norm[6] == 1'b1) ? 5'd19 :
-                                   (man_pre_norm[5] == 1'b1) ? 5'd20 :
-                                   (man_pre_norm[4] == 1'b1) ? 5'd21 :
-                                   (man_pre_norm[3] == 1'b1) ? 5'd22 :
-                                   (man_pre_norm[2] == 1'b1) ? 5'd23 :
-                                   (man_pre_norm[1] == 1'b1) ? 5'd24 :
-                                   (man_pre_norm[0] == 1'b1) ? 5'd25 : 5'd27;
-
-    // Pipelining Stage 2
-    reg stck_st2;
-    reg [4:0] slz_st2;
-    reg [7:0] exp_pre_norm_st2;
-    reg symbol_signi_st2;
-    reg symbol_st2_x1;
-    reg symbol_st2_x2;
-    reg [26:0] man_pre_norm_st2;
-    reg [7:0] exp_init_x1_st2;
-    reg [7:0] exp_init_x2_st2;
-    reg [22:0] man_st2_x1;
-    reg [22:0] man_st2_x2;
-    reg enable_in_st2;
+    // 16. 暫存暫存器
+    logic stck1;
+    logic [7:0] eyd1;
+    logic ss1, s22, s12;
+    logic [26:0] mye1;
+    logic [22:0] m12, m22;
+    logic [7:0] esi1, e12, e22;
+    logic [26:0] myd1;
+    logic [4:0] se1;
+    logic enable_in2;
 
     always @(posedge clk) begin
-        if (!rst_n) begin
-            stck_st2 <= 1'b0;
-            slz_st2 <= 5'd0;
-            exp_pre_norm_st2 <= 8'd0;
-            symbol_signi_st2 <= 1'b0;
-            symbol_st2_x1 <= 1'b0;
-            symbol_st2_x2 <= 1'b0;
-            man_pre_norm_st2 <= 27'd0;
-            exp_init_x1_st2 <= 8'd0;
-            exp_init_x2_st2 <= 8'd0;
-            man_st2_x1 <= 23'd0;
-            man_st2_x2 <= 23'd0;
-            enable_in_st2 <= 1'b0;
-        end else begin
-            stck_st2 <= stck;
-            slz_st2 <= search_leading_zeros;
-            exp_pre_norm_st2 <= exp_pre_norm;
-            symbol_signi_st2 <= symbol_signi;
-            symbol_st2_x1 <= symbol_st1_x1;
-            symbol_st2_x2 <= symbol_st1_x2;
-            man_pre_norm_st2 <= man_pre_norm;
-            exp_init_x1_st2 <= exp_init_x1;
-            exp_init_x2_st2 <= exp_init_x2;
-            man_st2_x1 <= man_init_x1_st1;
-            man_st2_x2 <= man_init_x2_st1;
-            enable_in_st2 <= enable_in_st1;
-        end
+        stck1       <= stck;
+        eyd1        <= eyd;
+        ss1         <= ss;
+        s22         <= s21;
+        s12         <= s11;
+        mye1        <= mye;
+        m12         <= m11;
+        esi1        <= esi;
+        m22         <= m21;
+        e12         <= e11;
+        myd1        <= myd;
+        se1         <= se;
+        e22         <= e21;
+        enable_in2  <= enable_in1;
     end
-    
-    // final exp normalization
-    wire [8:0] exp_norm_temp = {1'b0, exp_pre_norm_st2} - {4'b0, slz_st2};
-    wire [7:0] exp_norm = (exp_norm_temp[8] == 1'b0) ? exp_norm_temp[7:0] : 8'd0;
-    
-    wire [26:0] man_y_norm = (exp_norm_temp[8] == 1'b0) ?
-                             man_pre_norm_st2 << slz_st2 :
-                             (man_pre_norm_st2 << (exp_pre_norm_st2 - 8'd1));
 
-    // Rounding logic (round to nearest, tie to even)
-    wire round_bit = man_y_norm[1];
-    wire sticky_bit_final = stck_st2 | man_y_norm[0];
-    wire tie_even = man_y_norm[2];
-    
-    wire round_up = (round_bit && sticky_bit_final) || (round_bit && tie_even && !sticky_bit_final);
+    // 17~21. 尾數與指數最終處理
+    wire [8:0]  eyf  = {1'b0, eyd1} - {4'b0, se1};
+    wire [7:0]  eyr  = (eyf[8] == 0 && eyf > 0) ? eyf[7:0] : 8'b0;
+    wire [26:0] myf  = (eyf[8] == 0 && eyf > 0) ? myd1 << se1 : myd1 << (eyd1[4:0] - 5'b1);
+    wire [24:0] myr  = ((myf[1] && ~myf[0] && ~stck1 && myf[2]) || 
+                        (myf[1] && ~myf[0] && s12==s22 && stck1) || 
+                        (myf[1] && myf[0])) ? myf[26:2]+25'b1 : myf[26:2];
+    wire [7:0]  eyri = eyr + 8'b1;
+    wire [7:0]  ey   = (myr[24]) ? eyri : (|myr[23:0]==0) ? 8'b0 : eyr;
+    wire [22:0] my   = (myr[24]) ? 23'b0 : (|myr[23:0]==0) ? 23'b0 : myr[22:0];
+    wire        sy   = (ey==0 && my==0) ? s12 & s22 : ss1;
 
-    wire [24:0] man_y_finorm_unrounded = man_y_norm[26:2];
-    wire [24:0] man_y_finorm = man_y_finorm_unrounded + round_up;
-    
-    // final result assembly
-    wire [7:0] exp_y = (man_y_finorm[24] == 1'b1) ? exp_norm + 1 : exp_norm;
-    wire [22:0] man_y = (man_y_finorm[24] == 1'b1) ? man_y_finorm[22:0] : man_y_finorm[22:0];
-    wire symbol_y = (exp_y==8'b0 && man_y==23'd0) ? (symbol_st2_x1 & symbol_st2_x2) : symbol_signi_st2;
-    
-    // special case hanfling (NaN, Infinity)
-    wire nzm1 = |man_st2_x1;
-    wire nzm2 = |man_st2_x2;
+    // 22~23. 組合輸出
+    wire nzm1 = |m12;
+    wire nzm2 = |m22;
 
-    assign y =
-        (exp_init_x1_st2 == 8'd255 && exp_init_x2_st2 != 8'd255) ?
-            {symbol_st2_x1, 8'd255, nzm1, man_st2_x1[21:0]} :
-        (exp_init_x2_st2 == 8'd255 && exp_init_x1_st2 != 8'd255) ?
-            {symbol_st2_x2, 8'd255, nzm2, man_st2_x2[21:0]} :
-        (exp_init_x1_st2 == 8'd255 && exp_init_x2_st2 == 8'd255 && nzm2) ?
-            {symbol_st2_x2, 8'd255, 1'b1, man_st2_x2[21:0]} :
-        (exp_init_x1_st2 == 8'd255 && exp_init_x2_st2 == 8'd255 && nzm1) ?
-            {symbol_st2_x1, 8'd255, 1'b1, man_st2_x1[21:0]} :
-        (exp_init_x1_st2 == 8'd255 && exp_init_x2_st2 == 8'd255 && symbol_st2_x1 == symbol_st2_x2) ?
-            {symbol_st2_x1, 8'd255, 23'd0} :
-        (exp_init_x1_st2 == 8'd255 && exp_init_x2_st2 == 8'd255) ?
-            {1'b1, 8'd255, 1'b1, 22'd0} : {symbol_y, exp_y, man_y};
-    
-    assign ovf = (exp_init_x1_st2 < 8'd255 && exp_init_x2_st2 < 8'd255 &&
-                  (exp_pre_norm_st2 == 8'd255 || exp_y == 8'd255));
+    assign y = (e12==8'd255 && e22!=8'd255) ? {s12,8'd255,nzm1,m12[21:0]} :
+               (e22==8'd255 && e12!=8'd255) ? {s22,8'd255,nzm2,m22[21:0]} :
+               (e12==8'd255 && e22==8'd255 && nzm2) ? {s22,8'd255,1'b1,m22[21:0]} :
+               (e12==8'd255 && e22==8'd255 && nzm1) ? {s12,8'd255,1'b1,m12[21:0]} :
+               (e12==8'd255 && e22==8'd255 && s12==s22) ? {s12,8'd255,23'b0} :
+               (e12==8'd255 && e22==8'd255) ? {1'b1,8'd255,1'b1,22'b0} :
+               {sy, ey, my};
 
-    reg enable_out_reg;
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n) enable_out_reg <= 1'b0;
-        else        enable_out_reg <= enable_in_st2;
-    end
-    assign enable_out = enable_out_reg;
+    assign ovf = (e12<8'd255 && e22<8'd255 && 
+                 ((mye1[26] && esi1==8'd255) || (myr[24] && eyri==8'd255))) ? 1'b1 : 1'b0;
+
+    assign enable_out = enable_in2;
+
 endmodule
+
+`default_nettype wire
